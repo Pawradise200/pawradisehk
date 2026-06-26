@@ -13,9 +13,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;family=Noto+Sans+HK:wght@400;500;700;900&amp;family=Fredoka:wght@500;600;700&amp;family=Cormorant+Garamond:wght@600;700&amp;display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
+  html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%;}
   body{background:#F5F0E8;font-family:'Nunito','Noto Sans HK',system-ui,sans-serif;color:#2C4A6E;-webkit-font-smoothing:antialiased;}
   a{text-decoration:none;color:inherit;}
+  .nav-dd summary{list-style:none;}
+  .nav-dd summary::-webkit-details-marker{display:none;}
+  .nav-dd summary::marker{content:"";}
   ::selection{background:#F4B860;color:#1F3552;}
   @keyframes pwFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
 </style>
@@ -23,16 +26,23 @@
 <div data-screen-label="About" style="min-height:100vh;background:#F5F0E8;">
 
   <header style="position:sticky;top:0;z-index:100;background:#2C4A6E;box-shadow:0 2px 16px rgba(44,28,16,.28);">
-    <div style="max-width:1180px;margin:0 auto;padding:11px clamp(14px,4vw,24px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
-      <a href="index.dc.html" style="display:flex;align-items:center;gap:11px;">
-        <span style="display:grid;place-items:center;"><img src="images/pawradise-logo.png" alt="Pawradise" style="height:66px;width:auto;display:block;"></span>
-        <span style="display:flex;align-items:center;gap:8px;"><span style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:23px;color:#fff;">PAWRADISE</span><span style="padding:3px 10px;border-radius:999px;background:rgba(244,184,96,.2);border:1px solid rgba(244,184,96,.5);font-weight:800;font-size:12px;color:#F4B860;">關於我們</span></span>
+    <div style="max-width:1180px;margin:0 auto;padding:14px clamp(12px,3.5vw,22px);display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <a href="index.dc.html" style="display:flex;align-items:center;gap:11px;margin-top:2px;">
+        <span style="display:grid;place-items:center;"><img src="images/pawradise-logo.png" alt="Pawradise" style="height:44px;width:auto;display:block;position:relative;top:3px;"></span>
+        <span style="display:flex;align-items:center;gap:8px;"><span style="font-family:'Fredoka',sans-serif;font-weight:800;font-size:19px;color:#fff;">PAWRADISE</span><span style="padding:2px 8px;border-radius:999px;background:rgba(244,184,96,.2);border:1px solid rgba(244,184,96,.5);font-weight:800;font-size:10.5px;color:#F4B860;">關於我們</span></span>
       </a>
-      <nav style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;">
-        <a href="hotel.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">校園寵物酒店</a>
-        <a href="academy.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">毛孩社交學院</a>
-        <a href="about.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">關於我們</a>
-        <a href="https://wa.me/85294596420" target="_blank" rel="noopener" style="margin-left:4px;padding:10px 18px;border-radius:999px;font-weight:900;font-size:14.5px;color:#1F3552;background:#F4B860;white-space:nowrap;box-shadow:0 3px 0 #E08850;transition:transform .15s;" style-hover="transform:translateY(-1px);">立即預約</a>
+      <nav style="display:flex;align-items:center;">
+        <details class="nav-dd" style="position:relative;">
+          <summary style="display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);cursor:pointer;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" style="width:21px;height:21px;"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          </summary>
+          <div style="position:absolute;right:0;top:calc(100% + 12px);min-width:200px;background:#fff;border-radius:16px;box-shadow:0 16px 42px rgba(31,53,82,.30);border:1.5px solid #EDE6D8;padding:8px;display:flex;flex-direction:column;gap:2px;z-index:130;">
+            <a href="hotel.dc.html" style="padding:12px 14px;border-radius:11px;font-weight:800;font-size:15px;color:#1F3552;" style-hover="background:#FAF5EE;">校園寵物酒店</a>
+            <a href="academy.dc.html" style="padding:12px 14px;border-radius:11px;font-weight:800;font-size:15px;color:#1F3552;" style-hover="background:#FAF5EE;">毛孩社交學院</a>
+            <a href="about.dc.html" style="padding:12px 14px;border-radius:11px;font-weight:800;font-size:15px;color:#1F3552;" style-hover="background:#FAF5EE;">關於我們</a>
+            <a href="https://wa.me/85294596420" target="_blank" rel="noopener" style="margin-top:4px;padding:12px 14px;border-radius:11px;font-weight:900;font-size:15px;color:#1F3552;background:#F4B860;text-align:center;" style-hover="background:#EDA84A;">立即預約</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
