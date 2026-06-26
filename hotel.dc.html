@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;family=Noto+Sans+HK:wght@400;500;700;900&amp;family=Fredoka:wght@500;600;700&amp;family=Cormorant+Garamond:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#F5F0E8;font-family:'Nunito','Noto Sans HK',system-ui,sans-serif;color:#2C4A6E;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  ::selection{background:#F4B860;color:#1F3552;}
+  summary{list-style:none;}
+  summary::-webkit-details-marker{display:none;}
+  .faq-arrow{transition:transform .3s ease;}
+  details[open] .faq-arrow{transform:rotate(180deg);}
+  @keyframes pwFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+</style>
+</helmet>
+<div data-screen-label="Hotel" style="min-height:100vh;background:#F5F0E8;">
+
+  <header style="position:sticky;top:0;z-index:100;background:#2C4A6E;box-shadow:0 2px 16px rgba(44,28,16,.28);">
+    <div style="max-width:1180px;margin:0 auto;padding:11px clamp(14px,4vw,24px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+      <a href="index.dc.html" style="display:flex;align-items:center;gap:11px;">
+        <span style="display:grid;place-items:center;"><img src="images/pawradise-logo.png" alt="Pawradise" style="height:66px;width:auto;display:block;"></span>
+        <span style="display:flex;align-items:center;gap:8px;"><span style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:23px;color:#fff;">PAWRADISE</span><span style="padding:3px 10px;border-radius:999px;background:rgba(244,184,96,.2);border:1px solid rgba(244,184,96,.5);font-weight:800;font-size:12px;color:#F4B860;">校園式寵物酒店</span></span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;">
+        <a href="hotel.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">校園寵物酒店</a>
+        <a href="academy.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">毛孩社交學院</a>
+        <a href="about.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">關於我們</a>
+        <a href="https://wa.me/85294596420" target="_blank" rel="noopener" style="margin-left:4px;padding:10px 18px;border-radius:999px;font-weight:900;font-size:14.5px;color:#1F3552;background:#F4B860;white-space:nowrap;box-shadow:0 3px 0 #E08850;transition:transform .15s;" style-hover="transform:translateY(-1px);">立即預約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section style="padding:clamp(36px,8vw,60px) clamp(16px,5vw,24px) clamp(32px,7vw,52px);">
+      <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:clamp(28px,5vw,52px);align-items:center;">
+        <div>
+          <span style="display:inline-block;padding:7px 15px;border-radius:999px;background:#fff;border:1.5px solid #EDE6D8;font-weight:900;font-size:12.5px;letter-spacing:.04em;color:#2C4A6E;box-shadow:0 2px 10px rgba(92,62,39,.07);">校園式寵物酒店</span>
+          <h1 style="margin:20px 0 0;font-weight:900;font-size:clamp(2.1rem,4.2vw,3.2rem);line-height:1.18;color:#1F3552;letter-spacing:-.01em;">讓毛孩在<span style="background:rgba(244,184,96,.5);border-radius:6px;padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone;">安全、可控</span>的環境玩耍、學習、得到妥善照顧</h1>
+          <p style="margin:24px 0 0;font-weight:500;font-size:17px;line-height:1.62;color:#2C4A6E;max-width:520px;">我們採用全港首創的<strong style="font-weight: 800; color: rgb(31, 53, 82);">校園式系統化評分表（S1–S3）</strong>，先觀察評估每隻狗狗的性格，再安排最適合的分組活動和專屬照顧，讓牠們安心社交、舒適休息。</p>
+          <div style="margin:30px 0 0;display:flex;gap:13px;flex-wrap:wrap;">
+            <a href="https://wa.me/85294596420" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:900;font-size:16px;color:#1F3552;background:#F4B860;box-shadow:0 4px 0 #E08850;transition:transform .15s;" style-hover="transform:translateY(-2px);">預約參觀 / 留位</a>
+          </div>
+          <div style="margin:28px 0 0;display:flex;gap:9px;flex-wrap:wrap;">
+            
+            
+            
+          </div>
+        </div>
+        <div style="position:relative;">
+          <div style="border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(92,62,39,.2);border:6px solid #fff;">
+            <img src="images/env-space2.jpg" alt="Pawradise 環境" style="display:block;width:100%;height:clamp(340px,44vw,480px);object-fit:cover;object-position:center 60%;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" style="background:#fff;padding:clamp(40px,8vw,60px) clamp(16px,5vw,24px);border-top:1.5px solid #EDE6D8;border-bottom:1.5px solid #EDE6D8;">
+      <div style="max-width:1180px;margin:0 auto;">
+        <div style="text-align:center;max-width:680px;margin:0 auto 38px;">
+          <h2 style="margin:0;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#1F3552;">我們與傳統寵物酒店最不同的地方</h2>
+          <p style="margin:12px 0 0;font-weight:600;font-size:16px;color:#6B7A8F;">並非單純寄養 —— 而是一套有系統、可控、緊貼每隻狗性格的照顧模式。</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;align-items:stretch;">
+          <div style="display:flex;flex-direction:column;background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;">
+            <div style="width:54px;height:54px;border-radius:16px;background:#2C4A6E;display:grid;place-items:center;margin-bottom:16px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:27px;height:27px;"><path d="M2 8l10-4 10 4-10 4z"></path><path d="M6 10.5V15c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-4.5"></path><path d="M22 8.5v4"></path></svg></div>
+            <h3 style="margin:0;font-weight:900;font-size:18px;color:#1F3552;">校園式系統化評分分組</h3>
+            <p style="margin:4px 0 0;font-weight:700;font-size:11.5px;letter-spacing:.03em;color:#A8B2C0;">School-Style Grading &amp; Grouping</p>
+            <p style="margin:11px 0 0;font-weight:600;font-size:14px;line-height:1.65;color:#6B7A8F;">全港首創的系統化評分，按每隻狗狗的性格與社交能力安全分組。我們不會把毛孩困在玻璃房一整天——而是讓牠們在員工看管下，到大活動區自由玩耍社交。安全分組之餘，許多狗狗住過一趟回家後，社交能力更有明顯改善。</p>
+            <div style="margin-top:16px;padding-top:16px;border-top:1.5px solid #EDE6D8;display:flex;flex-direction:column;gap:9px;">
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">安全分組</span></div>
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">不困玻璃房・自由活動</span></div>
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">住得開心更有成長</span></div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;">
+            <div style="width:54px;height:54px;border-radius:16px;background:#F4B860;display:grid;place-items:center;margin-bottom:16px;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:27px;height:27px;"><rect x="3" y="4" width="18" height="13" rx="2"></rect><circle cx="12" cy="10.5" r="2.3"></circle><path d="M9 21h6M12 17v4"></path></svg></div>
+            <h3 style="margin:0;font-weight:900;font-size:18px;color:#1F3552;">24 小時房間監控</h3>
+            <p style="margin:4px 0 0;font-weight:700;font-size:11.5px;letter-spacing:.03em;color:#A8B2C0;">24-Hour Room Monitoring</p>
+            <p style="margin:11px 0 0;font-weight:600;font-size:14px;line-height:1.65;color:#6B7A8F;">入住起，家長可透過專屬帳戶登入監控系統，隨時看見毛孩的狀況。在住期間，我們亦會傳送相片與影片，並可預約親自探訪——讓你即使不在身邊，也能時刻安心。</p>
+            <div style="margin-top:16px;padding-top:16px;border-top:1.5px solid #EDE6D8;display:flex;flex-direction:column;gap:9px;">
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">專屬帳戶監控</span></div>
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">相片影片更新</span></div>
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">可預約探訪</span></div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;">
+            <div style="width:54px;height:54px;border-radius:16px;background:#EF6E6E;display:grid;place-items:center;margin-bottom:16px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:27px;height:27px;"><path d="M12 20s-7-4.4-9.2-9C1.3 7.3 3.5 4.3 6.7 4.3c2 0 3.3 1.1 5.3 3.2 2-2.1 3.3-3.2 5.3-3.2 3.2 0 5.4 3 4 6.7C19 15.6 12 20 12 20z"></path></svg></div>
+            <h3 style="margin:0;font-weight:900;font-size:18px;color:#1F3552;">受過專業培訓的照顧團隊</h3>
+            <p style="margin:4px 0 0;font-weight:700;font-size:11.5px;letter-spacing:.03em;color:#A8B2C0;">Professionally Trained Care Team</p>
+            <p style="margin:11px 0 0;font-weight:600;font-size:14px;line-height:1.65;color:#6B7A8F;">我們的團隊不只是看顧，更受過行為與情緒訓練，懂得讀懂狗狗的身體語言。背靠社交學院的專業，我們會按每隻毛孩的性格與情緒，度身安排活動、同伴與照顧方式，真正做到「每隻毛孩，專屬安排」。</p>
+            <div style="margin-top:16px;padding-top:16px;border-top:1.5px solid #EDE6D8;display:flex;flex-direction:column;gap:9px;">
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">情緒為本</span></div>
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">讀懂身體語言</span></div>
+              <div style="display:flex;align-items:center;gap:9px;"><span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:#F4B860;display:grid;place-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px;"><path d="M5 12l5 5L19 7"></path></svg></span><span style="font-weight:800;font-size:13.5px;color:#1F3552;">每隻毛孩・專屬安排</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin:30px auto 0;max-width:920px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#2C4A6E;border-radius:18px;padding:24px 28px;">
+          <p style="margin:0;font-weight:700;font-size:15.5px;line-height:1.55;color:#fff;max-width:620px;">非常建議家長親自前來參觀，了解更多照顧細節 —— 我們十分樂意逐一講解。</p>
+          <a href="https://wa.me/85294596420" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:13px 24px;border-radius:999px;font-weight:900;font-size:15px;color:#1F3552;background:#F4B860;white-space:nowrap;box-shadow:0 3px 0 #E08850;transition:transform .15s;" style-hover="transform:translateY(-2px);">預約參觀</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENVIRONMENT GALLERY -->
+    <section id="visit" style="padding:clamp(40px,8vw,60px) clamp(16px,5vw,24px);">
+      <div style="max-width:1180px;margin:0 auto;">
+        <div style="text-align:center;max-width:640px;margin:0 auto 32px;">
+          <h2 style="margin:0;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#1F3552;">我們的環境</h2>
+          <p style="margin:12px 0 0;font-weight:600;font-size:16px;color:#6B7A8F;">眼見為實 —— 看看毛孩居住的房間與自由活動空間。</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;">
+          <div style="aspect-ratio:4/3;border-radius:18px;overflow:hidden;"><img src="images/env1.jpg" alt="獨立寄養房間" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="aspect-ratio:4/3;border-radius:18px;overflow:hidden;"><img src="images/env2.jpg" alt="景觀休息大廳" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="aspect-ratio:4/3;border-radius:18px;overflow:hidden;"><img src="images/env3.jpg" alt="社交活動空間" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block;"></div>
+          <div style="aspect-ratio:4/3;border-radius:18px;overflow:hidden;"><img src="images/env-rooftop.jpg" alt="天台海景露台" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" style="background:#fff;padding:clamp(40px,8vw,60px) clamp(16px,5vw,24px);border-top:1.5px solid #EDE6D8;border-bottom:1.5px solid #EDE6D8;">
+      <div style="max-width:860px;margin:0 auto;">
+        <div style="text-align:center;margin:0 auto 32px;">
+          <h2 style="margin:0;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#1F3552;">寵物酒店價目表</h2>
+          <p style="margin:12px 0 0;font-weight:600;font-size:16px;color:#6B7A8F;">過夜住宿與日托服務・二擇其一，按需要選擇</p>
+        </div>
+        <div style="border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(92,62,39,.1);border:1.5px solid #EDE6D8;">
+          <div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;background:#2C4A6E;">
+            <div style="padding:15px 20px;"></div>
+            <div style="padding:13px 10px;text-align:center;"><div style="font-weight:900;font-size:15.5px;color:#fff;">過夜住宿</div><div style="font-weight:700;font-size:10.5px;letter-spacing:.02em;color:rgba(255,255,255,.62);">每晚・已含全日活動</div></div>
+            <div style="padding:13px 10px;text-align:center;border-left:1px solid rgba(255,255,255,.18);"><div style="font-weight:900;font-size:15.5px;color:#fff;">日托服務</div><div style="font-weight:700;font-size:10.5px;letter-spacing:.02em;color:rgba(255,255,255,.62);">每日・不過夜（退房逾 12:00 PM 按此收費）</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;border-top:1.5px solid #F5F0EA;">
+            <div style="padding:14px 20px;background:#FAF5EE;"><div style="font-weight:900;font-size:15.5px;color:#1F3552;">小型犬</div><div style="font-weight:700;font-size:11px;color:#A8B2C0;">Small · &lt;7.9kg</div></div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;display:flex;align-items:center;justify-content:center;">$420</div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;border-left:1.5px solid #F5F0EA;display:flex;align-items:center;justify-content:center;">$320</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;border-top:1.5px solid #F5F0EA;">
+            <div style="padding:14px 20px;background:#FAF5EE;"><div style="font-weight:900;font-size:15.5px;color:#1F3552;">中型犬</div><div style="font-weight:700;font-size:11px;color:#A8B2C0;">Medium · 8–17.9kg</div></div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;display:flex;align-items:center;justify-content:center;">$480</div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;border-left:1.5px solid #F5F0EA;display:flex;align-items:center;justify-content:center;">$380</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;border-top:1.5px solid #F5F0EA;">
+            <div style="padding:14px 20px;background:#FAF5EE;"><div style="font-weight:900;font-size:15.5px;color:#1F3552;">大型犬</div><div style="font-weight:700;font-size:11px;color:#A8B2C0;">Large · 18–27.9kg</div></div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;display:flex;align-items:center;justify-content:center;">$550</div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;border-left:1.5px solid #F5F0EA;display:flex;align-items:center;justify-content:center;">$450</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;border-top:1.5px solid #F5F0EA;">
+            <div style="padding:14px 20px;background:#FAF5EE;"><div style="font-weight:900;font-size:15.5px;color:#1F3552;">超大型犬</div><div style="font-weight:700;font-size:11px;color:#A8B2C0;">Giant · &gt;28kg</div></div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;display:flex;align-items:center;justify-content:center;">$680</div>
+            <div style="padding:14px 10px;text-align:center;font-weight:900;font-size:22px;color:#2C4A6E;border-left:1.5px solid #F5F0EA;display:flex;align-items:center;justify-content:center;">$580</div>
+          </div>
+          <div style="background:#2C4A6E;padding:15px 20px;display:flex;flex-direction:column;gap:5px;align-items:center;text-align:center;">
+            <span style="font-weight:800;font-size:13px;color:#F4B860;">過夜住宿已包含全日活動與社交，毋須另加日托</span>
+            <span style="font-weight:800;font-size:13.5px;color:#fff;">入住超過 14 天可獲 95 折優惠</span>
+            <span style="font-weight:800;font-size:13.5px;color:#fff;">3 隻寵物同時入住同一房間可獲 9 折優惠</span>
+          </div>
+        </div>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;">
+          <span style="font-weight:900;font-size:13px;color:#1F3552;">其他自選收費項目</span>
+          <span style="padding:6px 13px;border-radius:999px;background:#FAF5EE;border:1.5px solid #EDE6D8;font-weight:800;font-size:12.5px;color:#2C4A6E;">社交學院</span><span style="padding:6px 13px;border-radius:999px;background:#FAF5EE;border:1.5px solid #EDE6D8;font-weight:800;font-size:12.5px;color:#2C4A6E;">沖涼美容</span><span style="padding:6px 13px;border-radius:999px;background:#FAF5EE;border:1.5px solid #EDE6D8;font-weight:800;font-size:12.5px;color:#2C4A6E;">接送服務</span>
+          <span style="font-weight:600;font-size:12.5px;color:#A8B2C0;">有需要可聯絡職員查詢</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECK-IN / PREPARE -->
+    <section id="prepare" style="padding:clamp(40px,8vw,60px) clamp(16px,5vw,24px);">
+      <div style="max-width:1180px;margin:0 auto;">
+        <div style="text-align:center;margin:0 auto 36px;">
+          <h2 style="margin:0;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#1F3552;">入住前準備</h2>
+          <p style="margin:8px 0 0;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#A8B2C0;">Before Check-In</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start;">
+          <div style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:24px 22px;box-shadow:0 4px 20px rgba(92,62,39,.08);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:14px;"><span style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-weight:900;font-size:15px;">1</span><div><h3 style="margin:0;font-weight:900;font-size:16.5px;color:#1F3552;">請準備並帶來</h3><div style="font-weight:700;font-size:10.5px;letter-spacing:.04em;color:#A8B2C0;">What to Bring</div></div></div><ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;"><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">有效疫苗記錄及狗牌（電子版即可，作紀錄）</li><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">寄養期間的糧食（乾糧 / 濕糧 / 鮮食 / 生肉糧）</li><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">獸醫處方糧或藥物：請自備並註明餵食時間</li><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">1–2 件玩具或帶氣味衣物（勿貴重、易爛）</li><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">禮貌褲（尿片，如有需要）</li></ul></div>
+          <div style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:24px 22px;box-shadow:0 4px 20px rgba(92,62,39,.08);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:14px;"><span style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-weight:900;font-size:15px;">2</span><div><h3 style="margin:0;font-weight:900;font-size:16.5px;color:#1F3552;">我們會提供</h3><div style="font-weight:700;font-size:10.5px;letter-spacing:.04em;color:#A8B2C0;">We Provide</div></div></div><ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;"><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">床墊、食物碗、寵物廁所</li><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">過濾熟水</li><li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:#2C4A6E;" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">24 小時房間監控（入住首晚起可登入查看）</li></ul></div>
+        </div>
+        <div style="margin-top:24px;background:#2C4A6E;border-radius:18px;padding:28px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;align-items:center;">
+          <div>
+            <h3 style="margin:0;font-weight:900;font-size:18px;color:#fff;">入住 / 退房時間 &amp; 探訪</h3>
+            <div style="font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:2px;">Hours &amp; Visits</div>
+            <div style="margin-top:14px;font-weight:900;font-size:30px;color:#F4B860;line-height:1.1;">9:00 – 20:00</div>
+            <div style="font-weight:700;font-size:12.5px;color:rgba(255,255,255,.7);margin-top:4px;">每日入住 / 退房時間</div>
+          </div>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;">
+            <li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.85);" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">入住 / 退房時間：<strong style="color:#fff;">每日 9:00 – 20:00</strong></li>
+            <li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.85);" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">探訪時間：<strong style="color: rgb(255, 255, 255);">每日 16:00 – 18:00</strong>，每節最多2人共45 分鐘</li>
+            <li style="position:relative;padding-left:20px;font-weight:600;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.85);" style-before="content:'';position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;background:#F4B860;">探訪須最少提早一日，由家長親自通知，並視乎當時情況安排</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ VIDEOS -->
+    <section id="faq" style="background:#fff;padding:clamp(40px,8vw,60px) clamp(16px,5vw,24px);border-top:1.5px solid #EDE6D8;border-bottom:1.5px solid #EDE6D8;">
+      <div style="max-width:880px;margin:0 auto;">
+        <div style="text-align:center;margin:0 auto 32px;">
+          <h2 style="margin:0;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#1F3552;">入住前常見問題</h2>
+          <p style="margin:12px 0 0;font-weight:600;font-size:16px;color:#6B7A8F;">點開每條問題即可觀看影片解答</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <details style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:14px;overflow:hidden;">
+            <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:800;font-size:16px;color:#1F3552;">你們是否 24 小時看管狗狗？<span class="faq-arrow" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-size:13px;">▾</span></summary>
+            <div style="padding:0 20px 20px;"><div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;"><iframe loading="lazy" src="https://www.youtube.com/embed/dUt5qXH17gs" title="24 小時看管" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div></div>
+          </details>
+          <details style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:14px;overflow:hidden;">
+            <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:800;font-size:16px;color:#1F3552;">狗狗寄宿期間可否安排家人朋友探訪？<span class="faq-arrow" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-size:13px;">▾</span></summary>
+            <div style="padding:0 20px 20px;"><div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;"><iframe loading="lazy" src="https://www.youtube.com/embed/BHfYmjeYtIE" title="探訪安排" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div></div>
+          </details>
+          <details style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:14px;overflow:hidden;">
+            <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:800;font-size:16px;color:#1F3552;">我們如何照顧狗狗的膳食？<span class="faq-arrow" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-size:13px;">▾</span></summary>
+            <div style="padding:0 20px 20px;"><div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;"><iframe loading="lazy" src="https://www.youtube.com/embed/fdgWF6K_AG0" title="膳食照顧" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div></div>
+          </details>
+          <details style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:14px;overflow:hidden;">
+            <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:800;font-size:16px;color:#1F3552;">狗狗暫托入住前，家長需要準備甚麼？<span class="faq-arrow" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-size:13px;">▾</span></summary>
+            <div style="padding:0 20px 20px;"><div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;"><iframe loading="lazy" src="https://www.youtube.com/embed/kUThsUK_HvM" title="入住前準備" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div></div>
+          </details>
+          <details style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:14px;overflow:hidden;">
+            <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:800;font-size:16px;color:#1F3552;">狗狗暫托的照顧模式是怎樣？<span class="faq-arrow" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-size:13px;">▾</span></summary>
+            <div style="padding:0 20px 20px;"><div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;"><iframe loading="lazy" src="https://www.youtube.com/embed/ozkZ0ZtvLRE" title="照顧模式" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div></div>
+          </details>
+          <details style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:14px;overflow:hidden;">
+            <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:800;font-size:16px;color:#1F3552;">如何照顧狗狗大小二便？<span class="faq-arrow" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-size:13px;"></span></summary>
+            <div style="padding:0 20px 20px;"><div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;"><iframe loading="lazy" src="https://www.youtube.com/embed/Xni7bP_Jp5M" title="大小二便照顧" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div></div>
+          </details>
+          <details style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:14px;overflow:hidden;">
+            <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;font-weight:800;font-size:16px;color:#1F3552;">店內自由活動空間有否劃分大狗與小狗區？<span class="faq-arrow" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2C4A6E;color:#fff;display:grid;place-items:center;font-size:13px;">▾</span></summary>
+            <div style="padding:0 20px 20px;"><div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;"><iframe loading="lazy" src="https://www.youtube.com/embed/HS6pwxRfuyo" title="活動空間分區" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section style="padding:clamp(40px,8vw,60px) clamp(16px,5vw,24px);">
+      <div style="max-width:880px;margin:0 auto;">
+        <h2 style="margin:0 0 28px;text-align:center;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#1F3552;">了解更多真實評價</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+          <a href="https://www.instagram.com/pawradise_hk" target="_blank" rel="noopener" style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;box-shadow:0 4px 20px rgba(92,62,39,.1);transition:transform .22s,box-shadow .22s;display:block;" style-hover="transform:translateY(-3px);box-shadow:0 10px 30px rgba(92,62,39,.16);">
+            <div style="width:50px;height:50px;border-radius:14px;background:#FAF5EE;display:grid;place-items:center;margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="#2C4A6E" stroke="none"></circle></svg></div>
+            <h3 style="margin:0 0 6px;font-weight:900;font-size:18px;color:#1F3552;">Instagram</h3>
+            <p style="margin:0;font-weight:600;font-size:14px;line-height:1.55;color:#6B7A8F;">了解我們的照顧模式與理念 @pawradise_hk</p>
+          </a>
+          <a href="https://maps.app.goo.gl/g5btqukMKWJywq919" target="_blank" rel="noopener" style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;box-shadow:0 4px 20px rgba(92,62,39,.1);transition:transform .22s,box-shadow .22s;display:block;" style-hover="transform:translateY(-3px);box-shadow:0 10px 30px rgba(92,62,39,.16);">
+            <div style="width:50px;height:50px;border-radius:14px;background:#FAF5EE;display:grid;place-items:center;margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:25px;height:25px;"><path d="M12 3l2.6 5.6 6 .7-4.4 4.1 1.2 6L12 16.9 6.6 19.5l1.2-6L3.4 9.3l6-.7z"></path></svg></div>
+            <h3 style="margin:0 0 6px;font-weight:900;font-size:18px;color:#1F3552;">Google 評價</h3>
+            <p style="margin:0;font-weight:600;font-size:14px;line-height:1.55;color:#6B7A8F;">查看真實用家評價與口碑</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section id="book" style="padding:8px clamp(16px,5vw,24px) clamp(44px,9vw,72px);">
+      <div style="max-width:840px;margin:0 auto;background:#2C4A6E;border-radius:24px;padding:clamp(30px,6vw,48px) clamp(20px,5vw,32px);text-align:center;box-shadow:0 12px 40px rgba(44,74,110,.25);">
+        <h2 style="margin:0;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;">想安排入住？</h2>
+        <p style="margin:10px 0 0;font-weight:700;font-size:15px;color:rgba(255,255,255,.7);">簡單 5 步，輕鬆預約毛孩住宿</p>
+        <div style="position:relative;display:inline-block;max-width:560px;margin:30px auto 0;text-align:left;">
+          <div style="position:absolute;left:18px;top:19px;bottom:19px;width:2px;background:rgba(255,255,255,.18);"></div>
+          <div style="position:relative;display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;align-items:flex-start;gap:14px;"><span style="position:relative;z-index:1;flex-shrink:0;width:38px;height:38px;border-radius:50%;background:#F4B860;color:#1F3552;display:grid;place-items:center;font-weight:900;font-size:16px;box-shadow:0 0 0 4px #2C4A6E;">1</span><div style="padding-top:8px;font-weight:700;font-size:15px;color:#fff;line-height:1.5;">告知暫託日期，先查看是否仍有空位</div></div>
+            <div style="display:flex;align-items:flex-start;gap:14px;"><span style="position:relative;z-index:1;flex-shrink:0;width:38px;height:38px;border-radius:50%;background:#F4B860;color:#1F3552;display:grid;place-items:center;font-weight:900;font-size:16px;box-shadow:0 0 0 4px #2C4A6E;">2</span><div style="padding-top:8px;font-weight:700;font-size:15px;color:#fff;line-height:1.5;">如有需要，可預約親自到來參觀環境</div></div>
+            <div style="display:flex;align-items:flex-start;gap:14px;"><span style="position:relative;z-index:1;flex-shrink:0;width:38px;height:38px;border-radius:50%;background:#F4B860;color:#1F3552;display:grid;place-items:center;font-weight:900;font-size:16px;box-shadow:0 0 0 4px #2C4A6E;">3</span><div style="padding-top:8px;font-weight:700;font-size:15px;color:#fff;line-height:1.5;">到職員提供的預約系統頁面提交酒店預約申請</div></div>
+            <div style="display:flex;align-items:flex-start;gap:14px;"><span style="position:relative;z-index:1;flex-shrink:0;width:38px;height:38px;border-radius:50%;background:#F4B860;color:#1F3552;display:grid;place-items:center;font-weight:900;font-size:16px;box-shadow:0 0 0 4px #2C4A6E;">4</span><div style="padding-top:8px;font-weight:700;font-size:15px;color:#fff;line-height:1.5;">付款後確認預約</div></div>
+            <div style="display:flex;align-items:flex-start;gap:14px;"><span style="position:relative;z-index:1;flex-shrink:0;width:38px;height:38px;border-radius:50%;background:#F4B860;color:#1F3552;display:grid;place-items:center;font-weight:900;font-size:16px;box-shadow:0 0 0 4px #2C4A6E;">5</span><div style="padding-top:8px;font-weight:700;font-size:15px;color:#fff;line-height:1.5;">入住當天依照已填寫的入住時間到達辦理寵物手續</div></div>
+          </div>
+        </div>
+        <div style="margin:32px 0 0;display:flex;gap:13px;flex-wrap:wrap;justify-content:center;">
+          <a href="https://wa.me/85294596420" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:16px 34px;border-radius:999px;font-weight:900;font-size:17px;color:#1F3552;background:#F4B860;box-shadow:0 4px 0 #E08850;transition:transform .15s;" style-hover="transform:translateY(-2px);"><svg viewBox="0 0 24 24" fill="#1F3552" style="width:20px;height:20px;"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5 0-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.2.2 2 3.1 4.9 4.2 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.1-.7.2l-.7.9c-.1.2-.3.2-.5.1-.3-.1-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"></path></svg>WhatsApp 查詢</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background:#1F3552;color:#fff;padding:clamp(36px,7vw,48px) clamp(16px,5vw,24px) 28px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><img src="images/pawradise-logo.png" alt="Pawradise" style="height:52px;width:auto;display:block;"><span style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:20px;color:#fff;">PAWRADISE</span></div>
+        <p style="margin:0;font-weight:600;font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.6;">香港校園式寵物學院酒店</p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 12px;font-weight:900;font-size:14px;color:#F4B860;">探索</h4>
+        <p style="margin:0;font-weight:600;font-size:14px;line-height:2;color:rgba(255,255,255,.78);"><a href="about.dc.html" style-hover="color:#F4B860;">關於我們</a><br><a href="hotel.dc.html" style-hover="color:#F4B860;">校園式寵物酒店</a><br><a href="academy.dc.html" style-hover="color:#F4B860;">毛孩社交學院</a></p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 12px;font-weight:900;font-size:14px;color:#F4B860;">地址</h4>
+        <p style="margin:0;font-weight:600;font-size:14px;line-height:1.8;color:rgba(255,255,255,.78);"><a href="https://maps.app.goo.gl/g5btqukMKWJywq919" target="_blank" rel="noopener" style-hover="color:#F4B860;">尖沙咀彌敦道 200 號<br>Stone Rise 16–17 樓及天台</a></p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 12px;font-weight:900;font-size:14px;color:#F4B860;">聯絡</h4>
+        <p style="margin:0;font-weight:600;font-size:14px;line-height:1.8;color:rgba(255,255,255,.78);"><a href="https://www.instagram.com/pawradise_hk" target="_blank" rel="noopener" style-hover="color:#F4B860;">Instagram: @Pawradise_hk</a><br><a href="https://wa.me/85294596420" target="_blank" rel="noopener" style-hover="color:#F4B860;">WhatsApp: +852 9459 6420</a></p>
+      </div>
+    </div>
+    <p style="max-width:1180px;margin:28px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-weight:600;font-size:12.5px;color:rgba(255,255,255,.5);">© Pawradise Limited</p>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

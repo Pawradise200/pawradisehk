@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;family=Noto+Sans+HK:wght@400;500;700;900&amp;family=Fredoka:wght@500;600;700&amp;family=Cormorant+Garamond:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#F5F0E8;font-family:'Nunito','Noto Sans HK',system-ui,sans-serif;color:#2C4A6E;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  ::selection{background:#F4B860;color:#1F3552;}
+  @keyframes pwFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+</style>
+</helmet>
+<div data-screen-label="About" style="min-height:100vh;background:#F5F0E8;">
+
+  <header style="position:sticky;top:0;z-index:100;background:#2C4A6E;box-shadow:0 2px 16px rgba(44,28,16,.28);">
+    <div style="max-width:1180px;margin:0 auto;padding:11px clamp(14px,4vw,24px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+      <a href="index.dc.html" style="display:flex;align-items:center;gap:11px;">
+        <span style="display:grid;place-items:center;"><img src="images/pawradise-logo.png" alt="Pawradise" style="height:66px;width:auto;display:block;"></span>
+        <span style="display:flex;align-items:center;gap:8px;"><span style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:23px;color:#fff;">PAWRADISE</span><span style="padding:3px 10px;border-radius:999px;background:rgba(244,184,96,.2);border:1px solid rgba(244,184,96,.5);font-weight:800;font-size:12px;color:#F4B860;">關於我們</span></span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;">
+        <a href="hotel.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">校園寵物酒店</a>
+        <a href="academy.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">毛孩社交學院</a>
+        <a href="about.dc.html" style="padding:9px 13px;border-radius:999px;font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap;transition:background .18s;" style-hover="background:rgba(255,255,255,.12);">關於我們</a>
+        <a href="https://wa.me/85294596420" target="_blank" rel="noopener" style="margin-left:4px;padding:10px 18px;border-radius:999px;font-weight:900;font-size:14.5px;color:#1F3552;background:#F4B860;white-space:nowrap;box-shadow:0 3px 0 #E08850;transition:transform .15s;" style-hover="transform:translateY(-1px);">立即預約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section style="padding:clamp(36px,8vw,64px) clamp(16px,5vw,24px) clamp(32px,7vw,56px);">
+      <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:clamp(28px,5vw,52px);align-items:center;">
+        <div>
+          <span style="display:inline-block;padding:7px 15px;border-radius:999px;background:#fff;border:1.5px solid #EDE6D8;font-weight:900;font-size:12.5px;letter-spacing:.04em;color:#2C4A6E;box-shadow:0 2px 10px rgba(92,62,39,.07);">關於我們</span>
+          <h1 style="margin:20px 0 0;font-weight:900;font-size:clamp(2.1rem,4.2vw,3.2rem);line-height:1.18;color:#1F3552;letter-spacing:-.01em;">由愛出發，<br><span style="background:rgba(244,184,96,.5);border-radius:6px;padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone;">一路進化</span></h1>
+          <p style="margin:24px 0 0;font-weight:500;font-size:17px;line-height:1.62;color:#2C4A6E;max-width:520px;">Pawradise 始於 2021 年。由一間為自己愛犬而開設的「人寵共融空間」到寵物酒店，然後再到社交學院 —— 我們每一步的成長，都源於照顧毛孩時遇到的真實需要與親身經歷。</p>
+          <div style="margin:30px 0 0;display:flex;gap:13px;flex-wrap:wrap;">
+            <a href="#story" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:900;font-size:16px;color:#1F3552;background:#fff;border:2px solid #EDE6D8;transition:transform .15s,border-color .15s;" style-hover="transform:translateY(-2px);border-color:#F4B860;">我們的故事</a>
+            <a href="#timeline" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:900;font-size:16px;color:#1F3552;background:#fff;border:2px solid #EDE6D8;transition:transform .15s,border-color .15s;" style-hover="transform:translateY(-2px);border-color:#F4B860;">發展歷程</a>
+          </div>
+        </div>
+        <div style="position:relative;display:grid;place-items:center;">
+          <div style="width:100%;max-width:420px;aspect-ratio:1/1;border-radius:28px;background:#FAF5EE;border:6px solid #fff;box-shadow:0 12px 40px rgba(92,62,39,.18);display:grid;place-items:center;position:relative;overflow:hidden;">
+            <img src="images/about-sq.jpg" alt="Pawradise 臘腸犬" style="width:100%;height:100%;object-fit:cover;display:block;">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" style="background:#fff;padding:clamp(40px,8vw,64px) clamp(16px,5vw,24px);border-top:1.5px solid #EDE6D8;border-bottom:1.5px solid #EDE6D8;">
+      <div style="max-width:760px;margin:0 auto;">
+        <h2 style="margin:0 0 24px;text-align:center;font-weight:900;font-size:clamp(1.7rem,3vw,2.3rem);color:#1F3552;">我們的故事</h2>
+        <p style="margin:0 0 22px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:28px;line-height:1.3;color:#2C4A6E;text-align:center;">一切，都是從愛開始的。</p>
+        <p style="margin:0 0 16px;font-weight:500;font-size:16px;line-height:1.8;color:#2C4A6E;">Pawradise 的起點，是我們自己的第一隻大狗。那時候的香港，對毛孩還不太友善，我們常常牽着牠，卻找不到一個能讓牠安心奔跑、盡情做回自己的地方。剛好遇上疫情，大家都困在城市裡，於是我們有了一個簡單的念頭——不如，親手造一個。狗狗 Party Room 就這樣誕生了，讓更多毛孩與牠們的家人，在那段日子裡，依然有得玩、有得笑、有得一起留下回憶。</p>
+        <p style="margin:0 0 16px;font-weight:500;font-size:16px;line-height:1.8;color:#2C4A6E;">後來世界重新打開，家長們需要短暫離港，把最珍貴的毛孩交到我們手上。我們捨不得讓牠們像傳統寵物酒店那樣，整天被關在玻璃房裡望着外面——既然來的時候是開開心心的，住下來，也應該一樣快樂。於是我們開始用分組的方式照顧牠們，讓每隻狗狗都能在看顧下，到大大的活動區裡奔跑、社交、做自己。</p>
+        <p style="margin:0 0 16px;font-weight:500;font-size:16px;line-height:1.8;color:#2C4A6E;">但要讓一群性格各異的狗狗安全地一起玩，並不簡單。為了讓每隻毛孩都被妥善照顧、避免衝突，我們沒有靠感覺行事，而是一步步建立起一套自己的系統化分組評分——按性格、社交能力與情緒狀態，把狗狗安全分組。然後，一件很溫暖的事發生了：我們發現，來住過的狗狗，回家後竟然變得更懂得與同類相處。原來，住宿也可以是一種成長。社交學院，就是這樣慢慢長出來的。</p>
+        <p style="margin:0 0 16px;font-weight:500;font-size:16px;line-height:1.8;color:#2C4A6E;">而讓我們走得更深、更用心的，是一隻我們親自領養的狗狗。牠非常敏感、容易激動，看見其他狗甚至會失控。我們陪着牠，從一次次挫折裡學習、調整——但我們沒有停在「陪伴」，而是把每一次觀察、每一個有效的方法，慢慢整理成一套有系統、可複製的訓練方法。這，就是今天 S2 情緒重建系統的雛形。</p>
+        <p style="margin:24px 0 0;padding:20px 22px;background:#FAF5EE;border-left:4px solid #F4B860;border-radius:0 12px 12px 0;font-weight:700;font-size:16px;line-height:1.75;color:#1F3552;">走到今天，Pawradise 已不只是一個出於愛的念頭。我們是全港首個校園式寵物酒店與社交學院，有自己研發的系統化評分，也有受過專業訓練的團隊。但無論我們走得多遠、變得多專業，最初那份愛——想讓每一隻毛孩，都能開心、安心地成長——從來沒有變。</p>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" style="padding:clamp(40px,8vw,64px) clamp(16px,5vw,24px);">
+      <div style="max-width:780px;margin:0 auto;">
+        <div style="text-align:center;margin:0 auto 40px;">
+          <h2 style="margin:0;font-weight:900;font-size:clamp(1.7rem,3vw,2.3rem);color:#1F3552;">PAWRADISE發展歷程</h2>
+          <p style="margin:12px 0 0;font-weight:600;font-size:16px;color:#6B7A8F;">每一次進化，都來自親身經歷。</p>
+        </div>
+        <div style="position:relative;padding-left:34px;">
+          <div style="position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:#EDE6D8;"></div>
+          <div style="position:relative;display:flex;flex-direction:column;gap:22px;">
+            <div style="position:relative;">
+              <span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#F4B860;border:4px solid #F5F0E8;box-shadow:0 0 0 1.5px #EDE6D8;"></span>
+              <div style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:22px 24px;box-shadow:0 4px 20px rgba(92,62,39,.08);">
+                <span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#2C4A6E;color:#fff;font-weight:900;font-size:12.5px;margin-bottom:10px;">2021 · 品牌創立</span>
+                <h3 style="margin:0 0 7px;font-weight:900;font-size:18px;color:#1F3552;">狗狗 Party Room</h3>
+                <p style="margin:0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">「人寵共融空間」開業 —— 一切由對自己毛孩的愛開始。</p>
+              </div>
+            </div>
+            <div style="position:relative;">
+              <span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#F4B860;border:4px solid #F5F0E8;box-shadow:0 0 0 1.5px #EDE6D8;"></span>
+              <div style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:22px 24px;box-shadow:0 4px 20px rgba(92,62,39,.08);">
+                <span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#2C4A6E;color:#fff;font-weight:900;font-size:12.5px;margin-bottom:10px;">2023 · 校園式寵物酒店開業</span>
+                <h3 style="margin:0 0 7px;font-weight:900;font-size:18px;color:#1F3552;">校園式分組照顧</h3>
+                <p style="margin:0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">推出「校園式分組照顧」，並建立自家系統化分組評分，把安全與個別化照顧放在首位。</p>
+              </div>
+            </div>
+            <div style="position:relative;">
+              <span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#F4B860;border:4px solid #F5F0E8;box-shadow:0 0 0 1.5px #EDE6D8;"></span>
+              <div style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:22px 24px;box-shadow:0 4px 20px rgba(92,62,39,.08);">
+                <span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#2C4A6E;color:#fff;font-weight:900;font-size:12.5px;margin-bottom:10px;">2025 年 3 月 · 毛孩社交學院成立</span>
+                <h3 style="margin:0 0 7px;font-weight:900;font-size:18px;color:#1F3552;">毛孩社交學院</h3>
+                <p style="margin:0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">從住宿狗狗社交能力提升的發現出發，正式發展毛孩社交學院。</p>
+              </div>
+            </div>
+            <div style="position:relative;">
+              <span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#F4B860;border:4px solid #F5F0E8;box-shadow:0 0 0 1.5px #EDE6D8;"></span>
+              <div style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:22px 24px;box-shadow:0 4px 20px rgba(92,62,39,.08);">
+                <span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#2C4A6E;color:#fff;font-weight:900;font-size:12.5px;margin-bottom:10px;">2025 年 8 月 · 進駐尖沙咀旗艦店</span>
+                <h3 style="margin:0 0 7px;font-weight:900;font-size:18px;color:#1F3552;">尖沙咀三層商廈</h3>
+                <p style="margin:0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">由柴灣工廈遷至尖沙咀三層商廈，全面升級活動與教學空間。</p>
+              </div>
+            </div>
+            <div style="position:relative;">
+              <span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#F4B860;border:4px solid #F5F0E8;box-shadow:0 0 0 1.5px #EDE6D8;"></span>
+              <div style="background:#fff;border:1.5px solid #EDE6D8;border-radius:18px;padding:22px 24px;box-shadow:0 4px 20px rgba(92,62,39,.08);">
+                <span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#2C4A6E;color:#fff;font-weight:900;font-size:12.5px;margin-bottom:10px;">2025 年底 · 社交學院升級</span>
+                <h3 style="margin:0 0 7px;font-weight:900;font-size:18px;color:#1F3552;">課程體系升級優化</h3>
+                <p style="margin:0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">社交學院課程體系與 S2 情緒重建系統持續優化升級。</p>
+              </div>
+            </div>
+            <div style="position:relative;">
+              <span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#2C4A6E;border:4px solid #F5F0E8;box-shadow:0 0 0 1.5px #EDE6D8;"></span>
+              <div style="background:#2C4A6E;border-radius:18px;padding:22px 24px;box-shadow:0 8px 28px rgba(44,74,110,.18);">
+                <span style="display:inline-block;padding:4px 12px;border-radius:999px;background:#F4B860;color:#1F3552;font-weight:900;font-size:12.5px;margin-bottom:10px;">至今 · 持續成長</span>
+                <h3 style="margin:0 0 7px;font-weight:900;font-size:18px;color:#fff;">服務逾 500+養寵家庭</h3>
+                <p style="margin:0;font-weight:600;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.82);">眾多狗狗學員見證由「反應型」走向「穩定型」，一路與我們一起成長。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section style="background:#fff;padding:clamp(40px,8vw,64px) clamp(16px,5vw,24px);border-top:1.5px solid #EDE6D8;border-bottom:1.5px solid #EDE6D8;">
+      <div style="max-width:1180px;margin:0 auto;">
+        <h2 style="margin:0 0 38px;text-align:center;font-weight:900;font-size:clamp(1.7rem,3vw,2.3rem);color:#1F3552;">我們的信念</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;">
+          <div style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;">
+            <div style="width:54px;height:54px;border-radius:16px;background:#2C4A6E;display:grid;place-items:center;margin-bottom:16px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:27px;height:27px;"><path d="M12 20s-7-4.4-9.2-9C1.3 7.3 3.5 4.3 6.7 4.3c2 0 3.3 1.1 5.3 3.2 2-2.1 3.3-3.2 5.3-3.2 3.2 0 5.4 3 4 6.7C19 15.6 12 20 12 20z"></path></svg></div>
+            <h3 style="margin:0;font-weight:900;font-size:18px;color:#1F3552;">由愛出發</h3>
+            <p style="margin:3px 0 0;font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#C4B09A;">Born from Love</p>
+            <p style="margin:11px 0 0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">Pawradise 的一切，都源於我們對自己毛孩的愛，與一路走來的真實經歷。我們做的每一件事，都出於同一份心意。</p>
+          </div>
+          <div style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;">
+            <div style="width:54px;height:54px;border-radius:16px;background:#F4B860;display:grid;place-items:center;margin-bottom:16px;"><svg viewBox="0 0 24 24" fill="none" stroke="#1F3552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:27px;height:27px;"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5c.9 1 2.1 1.5 3.5 1.5s2.6-.5 3.5-1.5"></path><path d="M9 9.5h.01M15 9.5h.01"></path></svg></div>
+            <h3 style="margin:0;font-weight:900;font-size:18px;color:#1F3552;">情緒為本</h3>
+            <p style="margin:3px 0 0;font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#C4B09A;">Emotion First</p>
+            <p style="margin:11px 0 0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">我們相信，行為是情緒的結果。先理解狗狗的情緒、建立安全感，照顧與成長才會真正發生。</p>
+          </div>
+          <div style="background:#FAF5EE;border:1.5px solid #EDE6D8;border-radius:18px;padding:28px 24px;">
+            <div style="width:54px;height:54px;border-radius:16px;background:#EF6E6E;display:grid;place-items:center;margin-bottom:16px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:27px;height:27px;"><path d="M12 3l7 3v5.5c0 4.3-3 7.2-7 8.5-4-1.3-7-4.2-7-8.5V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+            <h3 style="margin:0;font-weight:900;font-size:18px;color:#1F3552;">安全至上</h3>
+            <p style="margin:3px 0 0;font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#C4B09A;">Safety First</p>
+            <p style="margin:11px 0 0;font-weight:600;font-size:14.5px;line-height:1.65;color:#6B7A8F;">每一個分組、每一次活動，安全都是我們不會妥協的底線。憑着系統化評分與全程看管，讓每一隻毛孩都能安心做自己。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding:clamp(40px,8vw,60px) clamp(16px,5vw,24px) clamp(48px,9vw,72px);">
+      <div style="max-width:760px;margin:0 auto;background:#2C4A6E;border-radius:24px;padding:clamp(34px,6vw,48px) clamp(20px,5vw,32px);text-align:center;box-shadow:0 12px 40px rgba(44,74,110,.25);">
+        <h2 style="margin:0;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;">想認識我們的服務？</h2>
+        <p style="margin:12px 0 26px;font-weight:600;font-size:15.5px;color:rgba(255,255,255,.78);">由寄養住宿到社交訓練，我們都在這裡。</p>
+        <div style="display:flex;gap:13px;flex-wrap:wrap;justify-content:center;">
+          <a href="hotel.dc.html" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;font-weight:900;font-size:16px;color:#1F3552;background:#fff;transition:transform .15s;" style-hover="transform:translateY(-2px);">校園寵物酒店</a>
+          <a href="academy.dc.html" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;font-weight:900;font-size:16px;color:#fff;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.35);transition:transform .15s,background .15s;" style-hover="transform:translateY(-2px);background:rgba(255,255,255,.18);">毛孩社交學院</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background:#1F3552;color:#fff;padding:clamp(36px,7vw,48px) clamp(16px,5vw,24px) 28px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><img src="images/pawradise-logo.png" alt="Pawradise" style="height:52px;width:auto;display:block;"><span style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:20px;color:#fff;">PAWRADISE</span></div>
+        <p style="margin:0;font-weight:600;font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.6;">香港校園式寵物學院酒店</p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 12px;font-weight:900;font-size:14px;color:#F4B860;">探索</h4>
+        <p style="margin:0;font-weight:600;font-size:14px;line-height:2;color:rgba(255,255,255,.78);"><a href="about.dc.html" style-hover="color:#F4B860;">關於我們</a><br><a href="hotel.dc.html" style-hover="color:#F4B860;">校園式寵物酒店</a><br><a href="academy.dc.html" style-hover="color:#F4B860;">毛孩社交學院</a></p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 12px;font-weight:900;font-size:14px;color:#F4B860;">地址</h4>
+        <p style="margin:0;font-weight:600;font-size:14px;line-height:1.8;color:rgba(255,255,255,.78);"><a href="https://maps.app.goo.gl/g5btqukMKWJywq919" target="_blank" rel="noopener" style-hover="color:#F4B860;">尖沙咀彌敦道 200 號<br>Stone Rise 16–17 樓及天台</a></p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 12px;font-weight:900;font-size:14px;color:#F4B860;">聯絡</h4>
+        <p style="margin:0;font-weight:600;font-size:14px;line-height:1.8;color:rgba(255,255,255,.78);"><a href="https://www.instagram.com/pawradise_hk" target="_blank" rel="noopener" style-hover="color:#F4B860;">Instagram: @Pawradise_hk</a><br><a href="https://wa.me/85294596420" target="_blank" rel="noopener" style-hover="color:#F4B860;">WhatsApp: +852 9459 6420</a></p>
+      </div>
+    </div>
+    <p style="max-width:1180px;margin:28px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-weight:600;font-size:12.5px;color:rgba(255,255,255,.5);">© Pawradise Limited</p>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
