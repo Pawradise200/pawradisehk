@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="robots" content="{{robots}}">
+<link rel="canonical" href="{{canonical}}">
+{{hreflang}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pawradise">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{og_image}}">
+<meta property="og:locale" content="{{og_locale}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1F3552">
+<link rel="icon" href="/assets/img/crest.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Noto+Sans+HK:wght@400;500&family=Noto+Serif+HK:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+{{jsonld}}
+</head>
+<body>
+<a class="skip" href="#main">{{skip_text}}</a>
+<div class="strip"></div>
+<header class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="{{home}}"><img src="/assets/img/crest.png" alt="Pawradise 校徽" width="44" height="37"><b>PAWRADISE</b></a>
+  <nav class="menu" aria-label="主選單">{{nav}}<a class="menu-cta" href="https://wa.me/85294596420">WhatsApp 查詢</a></nav>
+  <a class="btn btn-navy" href="https://wa.me/85294596420">WhatsApp 查詢</a>
+  <button class="burger" aria-label="開啟選單" aria-expanded="false" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰</button>
+</div></header>
+<main id="main">
+{{content}}
+</main>
+<footer>
+  <div class="wrap">
+    <div><img class="badge" src="/assets/img/crest.png" alt="Pawradise 校徽"><p style="margin-top:14px">校園式寵物酒店及毛孩社交學院</p><p class="fine">© Pawradise Limited · Est. 2021 Hong Kong</p></div>
+    <div><h4>探索</h4><p><a href="/academy/">毛孩社交學院</a><br><a href="/hotel/">校園式寵物酒店</a><br><a href="/about/">關於我們</a><br><a href="/parents/">家長專區</a><br><a href="/faq/">常見問題</a><br><a href="/guide/">家長指南</a></p></div>
+    <div><h4>聯絡</h4><p><a href="https://wa.me/85294596420">WhatsApp 9459 6420</a><br><a href="https://www.instagram.com/pawradise_hk">Instagram @pawradise_hk</a><br><a href="/campus/tsim-sha-tsui/">尖沙咀校區</a><br><a href="/campus/shau-kei-wan/">筲箕灣校區（即將開幕）</a><br><a href="/en/hotel/">English</a></p></div>
+  </div>
+</footer>
+</body>
+</html>
