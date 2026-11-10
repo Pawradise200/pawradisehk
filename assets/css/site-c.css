@@ -230,3 +230,6 @@
 .hc-timeline.h h3{font-size:18px}
 .hc-four.short p{font-size:15px;line-height:1.7}
 @media(max-width:560px){.hc-duo,.hc-ticks{grid-template-columns:1fr}}
+/* 相片位置（待補）：上線前全部換成真相 */
+.hc-ph{aspect-ratio:4/3;border:2px dashed var(--dusty);background:rgba(143,167,196,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--dusty);font-size:14px;padding:12px;margin:-28px -28px 20px}
+.hc-ph small{display:block;margin-top:6px;font-size:12px;line-height:1.5;color:var(--muted)}
