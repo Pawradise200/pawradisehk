@@ -411,3 +411,6 @@ footer.cf .wrap{display:block}
 @media(max-width:760px){.hc-hero h1 .nw{white-space:normal}}
 @media(max-width:760px){.hc-hero h1 .nw{white-space:nowrap}.hc-hero h1:has(.nw) br{display:inline}.hc-hero h1:has(.nw){font-size:clamp(22px,7.2vw,30px)}.hc-hero .ph .stat{max-width:300px}}
 .hc-hero .ph .stat:has(b.t){max-width:none;width:max-content}
+/* 主視覺大標題一行過：按字數自動縮放（11/10） */
+@media(min-width:761px){.hc .hc-hero h1.hc-one-line{white-space:nowrap;font-size:clamp(24px,calc(36vw / var(--n,11)),var(--fs-h1))}}
+@media(max-width:760px){.hc .hc-hero h1.hc-one-line{white-space:normal;font-size:clamp(24px,7.5vw,32px)}}
