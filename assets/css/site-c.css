@@ -339,3 +339,5 @@ footer.cf .wrap{display:block}
 /* 媒體 logo */
 .hc-media .logo img{height:34px;width:auto;display:block;filter:grayscale(1);opacity:.85}
 @media(min-width:761px){.cf-group summary{pointer-events:none}.cf-group summary:after,.cf-group summary:before{content:none!important;display:none!important}}
+.hc-media .logo[data-logo="bf"] img{filter:invert(1) grayscale(1);opacity:.75}
+.hc-media .logo[data-logo="um"] img{height:40px}
