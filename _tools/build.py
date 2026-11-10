@@ -33,8 +33,9 @@ NAV_ZH = [
     ('/parents/', '家長專區'),
 ]
 NAV_EN = [
-    ('/en/hotel/', 'Dog Hotel'),
+    ('/en/', 'Home'),
     ('/en/academy/trial/', 'Trial Day'),
+    ('/en/hotel/', 'Boarding House'),
     ('/', '中文'),
 ]
 
@@ -123,7 +124,7 @@ def faq_jsonld(content):
     }
 
 
-def apply_slots(content):
+def apply_slots(content, en=False):
     """相片位：assets/img/slots/<編號>.jpg 存在就用新相，否則保留現有相片或虛線框。"""
     try:
         SLOTS = json.load(open(os.path.join(ROOT, '_tools/slots.json'), encoding='utf-8'))
@@ -139,20 +140,20 @@ def apply_slots(content):
         tag, slot = m.group(0), m.group(1)
         if has(slot):
             tag = re.sub(r'src="[^"]*"', 'src="/assets/img/slots/%s"' % fname(slot), tag, 1)
-            if alt(slot):
+            if alt(slot) and not en:
                 tag = re.sub(r'alt="[^"]*"', 'alt="%s"' % alt(slot), tag, 1)
         return tag
     content = re.sub(r'<img data-slot="([^"]+)"[^>]*>', img_sub, content)
     def ph_sub(m):
         slot = m.group(1)
         if has(slot):
-            return '<img class="hc-ph-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), alt(slot))
+            return '<img class="hc-ph-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), '' if en else alt(slot))
         return m.group(0)
     content = re.sub(r'<div class="hc-ph" data-slot="([^"]+)">.*?</div>', ph_sub, content, flags=re.S)
     def rv_sub(m):
         slot = m.group(1)
         if has(slot):
-            return '<img class="hc-rv-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), alt(slot))
+            return '<img class="hc-rv-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), '' if en else alt(slot))
         return m.group(0)
     content = re.sub(r'<div class="hc-rv-ph" data-slot="([^"]+)">.*?</div>', rv_sub, content, flags=re.S)
     def logo_sub(m):
@@ -191,6 +192,11 @@ def render(layout, meta, content, url):
         'og_locale': 'en_HK' if en else 'zh_HK',
         'jsonld': jsonld,
         'skip_text': 'Skip to content' if en else '跳到主要內容',
+        'footer': open(os.path.join(SRC, 'partials', 'footer-en.html' if en else 'footer-zh.html'), encoding='utf-8').read(),
+        'wa_text': 'WhatsApp us' if en else 'WhatsApp 查詢',
+        'menu_label': 'Main menu' if en else '主選單',
+        'open_menu': 'Open menu' if en else '開啟選單',
+        'crest_alt': 'Pawradise crest' if en else 'Pawradise 校徽',
         'home': '/en/hotel/' if en else '/',
         'nav': nav_html(NAV_EN if en else NAV_ZH, meta.get('nav', url)),
         'content': content.strip(),
@@ -226,7 +232,7 @@ def main():
             src = os.path.join(dirpath, f)
             rel = os.path.relpath(src, PAGES)
             meta, content = read_page(src)
-            content = apply_slots(content)
+            content = apply_slots(content, str(meta.get('lang', '')).startswith('en'))
             url = url_of(rel)
             dst = os.path.join(ROOT, rel)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
