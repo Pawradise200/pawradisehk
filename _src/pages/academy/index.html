@@ -62,16 +62,26 @@
   </div>
 </section>
 
-<section class="hc-sec hc-navy" id="stories">
+<section class="hc-sec hc-cream" id="stories">
   <div class="wrap">
-    <div class="hc-head"><div><span class="caps">家長分享</span><h2>學員心聲</h2></div></div>
-    <div class="hc-voices" style="color:var(--cream)">
-      <blockquote>「依家出街真係冷靜咗好多，見到其他狗佢都會望返我哋。」<cite style="color:rgba(245,240,232,.7)">Ali 家長・柴犬</cite></blockquote>
-      <blockquote>「上堂前淨係識單方面追人，而家學識邀請狗狗玩、唔啱玩識離開。」<cite style="color:rgba(245,240,232,.7)">Loki 家長・史納莎</cite></blockquote>
-      <blockquote>「第一天還會對老師狂吠，到現在進教室冷靜多了，對職員也放鬆了。」<cite style="color:rgba(245,240,232,.7)">TaeTae &amp; Kumo 家長・貴婦</cite></blockquote>
-    </div>
+    <div class="hc-head"><div><span class="caps">家長分享</span><h2>學員心聲</h2></div><a class="hc-rating" href="https://maps.app.goo.gl/g5btqukMKWJywq919"><b>4.9★</b> Google 228 個評價</a></div>
+    <div class="hc-carousel"><button class="hc-arrow prev" type="button" aria-label="上一則">‹</button><div class="hc-reviews" tabindex="0">
+      <blockquote><div class="hc-rv-ph" data-slot="home-review-1">狗狗相</div><span class="hc-tag">學院</span><p>「上完堂後有明顯進步！我亦從牠的身體語言，清楚了解牠何時放鬆、何時緊張。」</p><cite>Emily・Google 評論</cite></blockquote>
+      <blockquote><div class="hc-rv-ph" data-slot="home-review-2">狗狗相</div><span class="hc-tag">學院</span><p>「mungmung 只要見到其他小朋友就不停咁吠，出街又特別激動……試一堂之後，導師好細心同我哋分析佢嘅情況。慢慢發現佢由第一日急急腳、情緒好容易失控，到而家無論上堂定平時出街，都快咗冷靜落嚟；出門口之前，亦開始識得乖乖坐低等爸爸媽媽。」</p><cite>Mungmung 家長分享・貴婦犬</cite></blockquote>
+      <blockquote><div class="hc-rv-ph" data-slot="academy-review-3">狗狗相</div><span class="hc-tag">學院</span><p>「依家出街真係冷靜咗好多，見到其他狗佢都會望返我哋。」</p><cite>Ali 家長・柴犬</cite></blockquote>
+      <blockquote><div class="hc-rv-ph" data-slot="academy-review-4">狗狗相</div><span class="hc-tag">學院</span><p>「上堂前淨係識單方面追人，而家學識邀請狗狗玩、唔啱玩識離開。」</p><cite>Loki 家長・史納莎</cite></blockquote>
+      <blockquote><div class="hc-rv-ph" data-slot="academy-review-5">狗狗相</div><span class="hc-tag">學院</span><p>「第一天還會對老師狂吠，到現在進教室冷靜多了，對職員也放鬆了。」</p><cite>TaeTae &amp; Kumo 家長・貴婦</cite></blockquote>
+    </div><button class="hc-arrow next" type="button" aria-label="下一則">›</button></div>
   </div>
 </section>
+
+<script>
+document.querySelectorAll('.hc-carousel').forEach(function (c) {
+  var t = c.querySelector('.hc-reviews');
+  c.querySelector('.prev').onclick = function () { t.scrollBy({ left: -t.clientWidth * 0.8, behavior: 'smooth' }); };
+  c.querySelector('.next').onclick = function () { t.scrollBy({ left: t.clientWidth * 0.8, behavior: 'smooth' }); };
+});
+</script>
 
 <section class="hc-sec hc-cream" id="trial">
   <div class="wrap">

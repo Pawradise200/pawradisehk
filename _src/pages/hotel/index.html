@@ -73,6 +73,25 @@
 
 <!--include trust-->
 
+<section class="hc-sec hc-cream" id="reviews">
+  <div class="wrap">
+    <div class="hc-head"><div><span class="caps">家長分享</span><h2>家長心聲</h2></div><a class="hc-rating" href="https://maps.app.goo.gl/g5btqukMKWJywq919"><b>4.9★</b> Google 228 個評價</a></div>
+    <div class="hc-carousel"><button class="hc-arrow prev" type="button" aria-label="上一則">‹</button><div class="hc-reviews" tabindex="0">
+      <blockquote><div class="hc-rv-ph" data-slot="home-review-4">狗狗相</div><span class="hc-tag hotel">酒店</span><p>「本身 Bearbear 性格係有啲細膽、好黐人……開頭都有啲擔心夜晚佢瞓唔瞓到。但呢度大部份時間都係放繩玩，玩到攰返房就瞓，每日都 send 好多相同片俾我，所以 Bear 都適應得好快。」</p><cite>Tracy・Bearbear 家長・Google 評論</cite></blockquote>
+      <blockquote><div class="hc-rv-ph" data-slot="home-review-5">狗狗相</div><span class="hc-tag hotel">酒店</span><p>「哥哥姐姐們會以我哋唔同年紀同性格，分別安排活動……每日幫我哋同爸爸媽媽報告，令到爸爸媽媽可以放心俾我哋寄宿。」</p><cite>Nat・三隻狗狗家長・Google 評論</cite></blockquote>
+      <blockquote><div class="hc-rv-ph" data-slot="home-review-6">狗狗相</div><span class="hc-tag hotel">酒店</span><p>「場地空間好大好靚，有足夠位置比毛孩放電，職員好有愛心，會將性格相似嘅狗狗分類，比佢哋一齊認識相處，去天台玩，夜晚仲會有獨立嘅空間比毛孩休息……」</p><cite>Mero・Google 評論</cite></blockquote>
+    </div><button class="hc-arrow next" type="button" aria-label="下一則">›</button></div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.hc-carousel').forEach(function (c) {
+  var t = c.querySelector('.hc-reviews');
+  c.querySelector('.prev').onclick = function () { t.scrollBy({ left: -t.clientWidth * 0.8, behavior: 'smooth' }); };
+  c.querySelector('.next').onclick = function () { t.scrollBy({ left: t.clientWidth * 0.8, behavior: 'smooth' }); };
+});
+</script>
+
 <section class="sec" id="faq">
   <div class="wrap" style="max-width:860px">
     <div class="sec-head"><span class="caps">FAQ</span><h2>入住前常見問題</h2></div>
