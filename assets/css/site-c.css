@@ -233,3 +233,9 @@
 /* 相片位置（待補）：上線前全部換成真相 */
 .hc-ph{aspect-ratio:4/3;border:2px dashed var(--dusty);background:rgba(143,167,196,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--dusty);font-size:14px;padding:12px;margin:-28px -28px 20px}
 .hc-ph small{display:block;margin-top:6px;font-size:12px;line-height:1.5;color:var(--muted)}
+/* 手機版：照顧方式左右滑動 */
+@media(max-width:560px){
+  .hc-four.short{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;scrollbar-width:none;margin-right:-16px;padding-right:16px}
+  .hc-four.short::-webkit-scrollbar{display:none}
+  .hc-four.short>div{flex:0 0 82%;scroll-snap-align:start}
+}
