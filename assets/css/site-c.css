@@ -376,3 +376,5 @@ footer.cf .wrap{display:block}
 /* 媒體 logo 用原本彩色（11/10 Erica） */
 .hc-media .logo img{filter:none;opacity:1}
 .hc-media .logo[data-logo="bf"] img{filter:invert(1);opacity:1}
+/* 首頁主標題一行顯示（11/10 Erica）；手機太窄時先自然換行 */
+@media(min-width:761px){.hc .hc-hero h1.hc-one-line{white-space:nowrap;font-size:clamp(28px,3.2vw,var(--fs-h1))}}
