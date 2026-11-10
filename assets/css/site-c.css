@@ -250,3 +250,13 @@
 .hc-on-navy .hc-timeline h3{color:var(--cream)}
 .hc-on-navy .hc-timeline p{color:rgba(245,240,232,.78)}
 .hc-ph-img{width:calc(100% + 56px);aspect-ratio:4/3;object-fit:cover;margin:-28px -28px 20px;display:block;max-width:none}
+/* 資歷列改淺色，避免同深藍帶黐埋 */
+.hc-creds{background:var(--cream);color:var(--navy);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hc-creds b{color:var(--navy)}
+.hc-creds span{color:var(--muted);opacity:1}
+/* 校訓 */
+.hc-values .hc-three>div{text-align:center}
+.hc-spot{height:84px;width:auto;margin:0 auto 14px;display:block}
+.hc-link{color:var(--navy);font-size:14px;letter-spacing:.1em;border-bottom:1px solid currentColor}
+.hc-path .hc-ph{margin:-32px -32px 20px}
+.hc-path .hc-ph-img{width:calc(100% + 64px);margin:-32px -32px 20px}
