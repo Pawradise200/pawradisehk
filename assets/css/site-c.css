@@ -397,3 +397,5 @@ footer.cf .wrap{display:block}
 .hc-reviews blockquote{grid-template-rows:auto auto auto;align-content:start;min-height:0}
 .hc-reviews blockquote p{align-self:start}
 .hc-carousel .hc-reviews{align-items:flex-start}
+/* 家長評價內文改黑體，更似家長傾偈（11/10） */
+.hc-reviews blockquote p{font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.9}
