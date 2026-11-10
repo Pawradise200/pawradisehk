@@ -27,3 +27,17 @@ for f in sorted(glob.glob(os.path.join(d, 'edits', '*.json'))):
     open(p, 'w', encoding='utf-8').write(s)
     done.append(os.path.splitext(os.path.basename(f))[0])
 print(json.dumps({'applied': done, 'failed': fail}, ensure_ascii=False, indent=1))
+
+# 字體大小：<dir>/style/site.json → site-c.css 嘅字體設定區塊
+sp = os.path.join(d, 'style', 'site.json')
+if os.path.exists(sp):
+    j = json.load(open(sp, encoding='utf-8')); st = j.get('data', j)
+    if st.get('status') == 'pending':
+        import re
+        css = os.path.join(ROOT, 'assets/css/site-c.css')
+        s = open(css, encoding='utf-8').read()
+        block = ':root{--fs-h1:%dpx;--fs-h2:%dpx;--fs-h3:%dpx;--fs-body:%dpx;--lh-body:%s}' % (st['h1'], st['h2'], st['h3'], st['body'], st['lh'])
+        s2 = re.sub(r'(/\* === 字體設定.*?\*/\n):root\{[^}]*\}', lambda m: m.group(1) + block, s, count=1, flags=re.S)
+        if s2 != s:
+            open(css, 'w', encoding='utf-8').write(s2)
+            print('字體已套用：', block)
