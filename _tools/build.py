@@ -139,6 +139,12 @@ def apply_slots(content):
             return '<img class="hc-ph-img" src="/assets/img/slots/%s.jpg" alt="" loading="lazy">' % slot
         return m.group(0)
     content = re.sub(r'<div class="hc-ph" data-slot="([^"]+)">.*?</div>', ph_sub, content, flags=re.S)
+    def rv_sub(m):
+        slot = m.group(1)
+        if has(slot):
+            return '<img class="hc-rv-img" src="/assets/img/slots/%s.jpg" alt="" loading="lazy">' % slot
+        return m.group(0)
+    content = re.sub(r'<div class="hc-rv-ph" data-slot="([^"]+)">.*?</div>', rv_sub, content, flags=re.S)
     return content
 
 def render(layout, meta, content, url):
