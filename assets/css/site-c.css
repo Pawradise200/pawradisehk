@@ -430,3 +430,9 @@ footer.cf .wrap{display:block}
 .hc .hc-cases .hc-tag{align-self:flex-start}
 .hc .hc-cases .who .hc-rv-ph{order:-1}
 .hc .hc-cases .who p{flex:1}
+/* 學院頁個案卡：電腦同手機都左右掃 */
+.hc .hc-cases{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:20px;padding-bottom:10px}
+.hc .hc-cases article{flex:0 0 380px;scroll-snap-align:start}
+.hc .hc-cases .sit{margin:0;font-size:15px;line-height:1.75;color:var(--ink-soft,#5a5a5a)}
+@media(max-width:760px){.hc .hc-cases article{flex:0 0 84%}}
+.hc .hc-cases .how{display:block}
