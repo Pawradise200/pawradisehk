@@ -378,3 +378,6 @@ footer.cf .wrap{display:block}
 .hc-media .logo[data-logo="bf"] img{filter:invert(1);opacity:1}
 /* 首頁主標題一行顯示（11/10 Erica）；手機太窄時先自然換行 */
 @media(min-width:761px){.hc .hc-hero h1.hc-one-line{white-space:nowrap;font-size:clamp(28px,3.2vw,var(--fs-h1))}}
+.hc-tag{order:0;flex:0 0 100%;display:inline-block;font-size:11px;letter-spacing:.1em;color:var(--sage);margin-bottom:-6px}
+.hc-tag.hotel{color:var(--dusty)}
+@media(max-width:560px){.hc-rv-ph,.hc-rv-img{flex-basis:52px;width:52px;height:52px;font-size:10px}}
