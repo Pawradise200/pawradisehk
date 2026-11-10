@@ -381,3 +381,8 @@ footer.cf .wrap{display:block}
 .hc-tag{order:0;flex:0 0 100%;display:inline-block;font-size:11px;letter-spacing:.1em;color:var(--sage);margin-bottom:-6px}
 .hc-tag.hotel{color:var(--dusty)}
 @media(max-width:560px){.hc-rv-ph,.hc-rv-img{flex-basis:52px;width:52px;height:52px;font-size:10px}}
+/* 好評標籤：圓形底色（11/10） */
+.hc-tag{display:inline-flex;align-items:center;flex:0 0 auto;width:auto;font-size:13px;font-weight:500;letter-spacing:.06em;padding:4px 14px;border-radius:999px;background:rgba(124,143,118,.16);color:#4f6249;margin:0 0 4px}
+.hc-tag.hotel{background:rgba(143,167,196,.2);color:#3d5a80}
+.hc-reviews blockquote{align-content:flex-start}
+.hc-reviews blockquote .hc-tag{order:0;margin-right:100%}
