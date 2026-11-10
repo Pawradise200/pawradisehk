@@ -123,6 +123,24 @@ def faq_jsonld(content):
     }
 
 
+def apply_slots(content):
+    """相片位：assets/img/slots/<編號>.jpg 存在就用新相，否則保留現有相片或虛線框。"""
+    def has(slot):
+        return os.path.exists(os.path.join(ROOT, 'assets/img/slots', slot + '.jpg'))
+    def img_sub(m):
+        tag, slot = m.group(0), m.group(1)
+        if has(slot):
+            tag = re.sub(r'src="[^"]*"', 'src="/assets/img/slots/%s.jpg"' % slot, tag, 1)
+        return tag
+    content = re.sub(r'<img data-slot="([^"]+)"[^>]*>', img_sub, content)
+    def ph_sub(m):
+        slot = m.group(1)
+        if has(slot):
+            return '<img class="hc-ph-img" src="/assets/img/slots/%s.jpg" alt="" loading="lazy">' % slot
+        return m.group(0)
+    content = re.sub(r'<div class="hc-ph" data-slot="([^"]+)">.*?</div>', ph_sub, content, flags=re.S)
+    return content
+
 def render(layout, meta, content, url):
     lang = meta.get('lang', 'zh-HK')
     en = lang.startswith('en')
@@ -185,6 +203,7 @@ def main():
             src = os.path.join(dirpath, f)
             rel = os.path.relpath(src, PAGES)
             meta, content = read_page(src)
+            content = apply_slots(content)
             url = url_of(rel)
             dst = os.path.join(ROOT, rel)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
