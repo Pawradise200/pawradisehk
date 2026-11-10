@@ -220,3 +220,13 @@
   .hc-timeline.h:before{left:20px;right:20px;top:20px;bottom:auto;width:auto;height:1px}
   .hc-timeline.h li{padding:60px 0 0 0}
 }
+/* 介紹圖式：簡潔清單 */
+.hc-duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px;border-top:1px solid var(--line);padding-top:24px}
+.hc-duo .caps{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}
+.hc-duo b{font-weight:500;font-size:17px;color:var(--navy)}
+.hc-ticks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 40px}
+.hc-ticks li{font-size:17px;color:var(--navy);padding-left:30px;position:relative}
+.hc-ticks li:before{content:"✓";position:absolute;left:0;color:var(--sage);font-weight:600}
+.hc-timeline.h h3{font-size:18px}
+.hc-four.short p{font-size:15px;line-height:1.7}
+@media(max-width:560px){.hc-duo,.hc-ticks{grid-template-columns:1fr}}
