@@ -436,3 +436,11 @@ footer.cf .wrap{display:block}
 .hc .hc-cases .sit{margin:0;font-size:15px;line-height:1.75;color:var(--ink-soft,#5a5a5a)}
 @media(max-width:760px){.hc .hc-cases article{flex:0 0 84%}}
 .hc .hc-cases .how{display:block}
+/* 時刻卡 */
+.hc .hc-cases .scene{aspect-ratio:4/3;margin:-24px -24px 4px;border-radius:var(--r-card,14px) var(--r-card,14px) 0 0}
+.hc .hc-cases article{overflow:hidden}
+.hc .hc-cases .think{margin:0;font-size:15px;padding:10px 14px;background:var(--cream,#f6f0e6);border-radius:10px}
+.hc .hc-cases .think b{display:block;font-size:12px;letter-spacing:.08em;color:var(--dusty,#b0846a);margin-bottom:4px}
+.hc .hc-cases-note{text-align:center;font-size:14px;color:var(--ink-soft,#5a5a5a);margin:18px 0 0}
+.hc .hc-cases-note b{color:var(--navy,#1f2d4a)}
+.hc .hc-cases .scene{aspect-ratio:auto;height:170px;min-height:0}
