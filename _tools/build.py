@@ -174,6 +174,8 @@ def main():
     import hashlib
     css_ver = hashlib.md5(open(os.path.join(ROOT, 'assets/css/site.css'), 'rb').read()).hexdigest()[:8]
     layout = layout.replace('/assets/css/site.css"', '/assets/css/site.css?v=%s"' % css_ver)
+    c_ver = hashlib.md5(open(os.path.join(ROOT, 'assets/css/site-c.css'), 'rb').read()).hexdigest()[:8]
+    layout = layout.replace('/assets/css/site-c.css"', '/assets/css/site-c.css?v=%s"' % c_ver)
     built, sitemap = [], []
     for dirpath, _, files in os.walk(PAGES):
         for f in sorted(files):
