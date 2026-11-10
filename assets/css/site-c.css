@@ -414,3 +414,19 @@ footer.cf .wrap{display:block}
 /* 主視覺大標題一行過：按字數自動縮放（11/10） */
 @media(min-width:761px){.hc .hc-hero h1.hc-one-line{white-space:nowrap;font-size:clamp(24px,calc(36vw / var(--n,11)),var(--fs-h1))}}
 @media(max-width:760px){.hc .hc-hero h1.hc-one-line{white-space:normal;font-size:clamp(24px,7.5vw,32px)}}
+
+/* 學院頁：問題→做法→改變 */
+.hc .hc-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hc .hc-cases article{background:#fff;border:1px solid rgba(92,62,39,.12);border-radius:var(--r-card,14px);padding:24px;display:flex;flex-direction:column;gap:12px}
+.hc .hc-cases h3{margin:0}
+.hc .hc-cases .how{margin:0;font-size:15px}
+.hc .hc-cases .how b,.hc .hc-cases .who b{display:block;font-size:12px;letter-spacing:.08em;color:var(--sage,#7a8b6f);margin-bottom:4px}
+.hc .hc-cases .who{display:flex;gap:14px;align-items:flex-start;margin-top:auto;padding-top:14px;border-top:1px solid rgba(92,62,39,.1)}
+.hc .hc-cases .who .hc-rv-ph{flex:0 0 64px;width:64px;height:64px}
+.hc .hc-cases .who p{margin:0;font-size:15px}
+.hc .hc-belief-line{text-align:center;margin:36px auto 0;max-width:640px;font-size:18px}
+.hc .hc-belief-line b{display:block;font-size:22px;margin-bottom:6px}
+@media(max-width:760px){.hc .hc-cases{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 8px}.hc .hc-cases article{flex:0 0 84%;scroll-snap-align:start}}
+.hc .hc-cases .hc-tag{align-self:flex-start}
+.hc .hc-cases .who .hc-rv-ph{order:-1}
+.hc .hc-cases .who p{flex:1}
