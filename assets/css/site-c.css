@@ -363,3 +363,16 @@ footer.cf .wrap{display:block}
 .hc .hc-head h2,.hc h2{font-size:clamp(22px,2.8vw,var(--fs-h2))}
 .hc h3{font-size:var(--fs-h3)}
 .hc p,.hc li,.hc .hc-faq details p{font-size:var(--fs-body);line-height:var(--lh-body)}
+
+/* === 圓角（品牌：唔好方正，但保持細緻） === */
+:root{--r-card:14px;--r-img:14px}
+.hc-card,.hc-light>div,.hc-steps>div,.hc-four>div,.hc-path>div,.hc-signs>div,.hc-two>div,.hc-campus>div,.hc-note,.hc-reviews blockquote{border-radius:var(--r-card);overflow:hidden}
+.hc-card img{border-radius:0}
+.hc-mosaic img,.hc-letter>img,.hc-student>img,.hc-values2 .hc-ph,.hc-values2 .hc-ph-img,.hc-map iframe{border-radius:var(--r-img)}
+.hc-hero .ph .stat{border-radius:12px}
+.hc-ph{border-radius:10px}
+.btn{border-radius:999px}
+.devnull{}
+/* 媒體 logo 用原本彩色（11/10 Erica） */
+.hc-media .logo img{filter:none;opacity:1}
+.hc-media .logo[data-logo="bf"] img{filter:invert(1);opacity:1}
