@@ -386,3 +386,14 @@ footer.cf .wrap{display:block}
 .hc-tag.hotel{background:rgba(143,167,196,.2);color:#3d5a80}
 .hc-reviews blockquote{align-content:flex-start}
 .hc-reviews blockquote .hc-tag{order:0;margin-right:100%}
+/* 好評卡 v2：頂部頭像＋署名，評價置中（11/10） */
+.hc-reviews blockquote{display:grid!important;grid-template-columns:84px 1fr;grid-template-rows:auto auto 1fr;grid-template-areas:"pic tag" "pic who" "q q";column-gap:16px;row-gap:4px;align-items:center;min-height:300px;padding:26px 26px 28px}
+.hc-reviews blockquote .hc-rv-ph,.hc-reviews blockquote .hc-rv-img{grid-area:pic;width:84px;height:84px;flex:none;align-self:start;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+.hc-reviews blockquote .hc-tag{grid-area:tag;justify-self:start;align-self:end;margin:0}
+.hc-reviews blockquote cite{grid-area:who;align-self:start;margin:0;font-size:13px;line-height:1.5}
+.hc-reviews blockquote cite:after{content:"★★★★★";display:block;color:var(--gold);letter-spacing:2px;font-size:12px;margin-top:2px}
+.hc-reviews blockquote p{grid-area:q;align-self:center;margin:18px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:17px;line-height:1.85}
+@media(max-width:560px){.hc-reviews blockquote{grid-template-columns:68px 1fr;min-height:0}.hc-reviews blockquote .hc-rv-ph,.hc-reviews blockquote .hc-rv-img{width:68px;height:68px}}
+.hc-reviews blockquote{grid-template-rows:auto auto auto;align-content:start;min-height:0}
+.hc-reviews blockquote p{align-self:start}
+.hc-carousel .hc-reviews{align-items:flex-start}
