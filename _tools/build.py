@@ -145,6 +145,13 @@ def apply_slots(content):
             return '<img class="hc-rv-img" src="/assets/img/slots/%s.jpg" alt="" loading="lazy">' % slot
         return m.group(0)
     content = re.sub(r'<div class="hc-rv-ph" data-slot="([^"]+)">.*?</div>', rv_sub, content, flags=re.S)
+    def logo_sub(m):
+        key, label = m.group(1), m.group(2)
+        for ext in ('png', 'svg', 'jpg'):
+            if os.path.exists(os.path.join(ROOT, 'assets/img/logos', key + '.' + ext)):
+                return '<span class="logo" data-logo="%s"><img src="/assets/img/logos/%s.%s" alt="%s"></span>' % (key, key, ext, label)
+        return m.group(0)
+    content = re.sub(r'<span class="logo" data-logo="([^"]+)">([^<]*)</span>', logo_sub, content)
     return content
 
 def render(layout, meta, content, url):

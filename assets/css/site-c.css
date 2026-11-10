@@ -306,3 +306,36 @@
 .hc-navy .hc-letter>img{width:100%;aspect-ratio:4/5;object-fit:cover}
 @media(max-width:760px){.hc-signs{grid-template-columns:1fr}.hc-signs>div{flex-direction:row;text-align:left;gap:14px}.hc-signs img{height:48px;margin:0}.hc-signs>div>b,.hc-signs>div>span{display:block}.hc-plain li{display:block}.hc-plain b{display:block}}
 @media(max-width:760px){.hc-signs>div{display:grid;grid-template-columns:48px 1fr;column-gap:14px;text-align:left;align-items:center}.hc-signs img{grid-row:span 2}}
+/* 頁尾（參考 Ruff & Fetch：手機收起式＋圖示掣） */
+footer.cf{background:var(--navy);color:var(--cream);border-radius:28px 28px 0 0;padding:56px 0 30px;margin-top:0}
+footer.cf .wrap{display:block}
+.cf-brand{display:flex;align-items:center;gap:16px;margin-bottom:34px}
+.cf-brand .badge{width:58px;background:var(--cream);border-radius:14px;padding:8px}
+.cf-brand b{display:block;font-family:var(--caps);letter-spacing:.3em;font-size:16px}
+.cf-brand span{font-size:13px;opacity:.8}
+.cf-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.cf-group summary{list-style:none;cursor:pointer;font-family:var(--serif-zh);font-size:17px;font-weight:600;color:var(--gold);padding:6px 0 12px}
+.cf-group summary::-webkit-details-marker{display:none}
+.cf-group p{margin:0}
+.cf-group a{display:block;color:rgba(245,240,232,.85);font-size:14px;padding:5px 0;text-decoration:none}
+.cf-group a:hover{color:var(--gold)}
+.cf-group small{display:block;font-size:12px;opacity:.65}
+.cf-icons{display:flex;justify-content:center;gap:16px;margin:40px 0 28px}
+.cf-icons a{width:52px;height:52px;border:1px solid rgba(245,240,232,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cream)}
+.cf-icons a:hover{border-color:var(--gold);color:var(--gold)}
+.cf-icons svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cf-base{border-top:1px solid rgba(245,240,232,.18);padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12px;opacity:.75}
+.cf-base a{color:inherit}
+.cf-base .caps{font-size:11px}
+@media(max-width:760px){
+  .cf-cols{grid-template-columns:1fr;gap:0}
+  .cf-group{border-bottom:1px solid rgba(245,240,232,.18)}
+  .cf-group summary{padding:16px 0;display:flex;justify-content:space-between}
+  .cf-group summary:after{content:"＋";color:var(--cream)}
+  .cf-group[open] summary:after{content:"－"}
+  .cf-group p{padding-bottom:14px}
+  .cf-base{flex-direction:column;align-items:center;text-align:center}
+}
+/* 媒體 logo */
+.hc-media .logo img{height:34px;width:auto;display:block;filter:grayscale(1);opacity:.85}
+@media(min-width:761px){.cf-group summary{pointer-events:none}.cf-group summary:after,.cf-group summary:before{content:none!important;display:none!important}}
