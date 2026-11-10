@@ -4,9 +4,9 @@
 用法：python3 _tools/photos.py
 - 對照表：~/Desktop/內部文件/網站重建/相片對照表.md（「檔名」欄填相片檔名）
 - 相片：~/Desktop/內部文件/網站重建/新相片/（可有子資料夾）
-- 輸出：assets/img/slots/<編號>.jpg（長邊 1800px）；之後行 build.py 即生效
+- 輸出：assets/img/slots/<SEO 檔名>（見 _tools/slots.json）（長邊 1800px）；之後行 build.py 即生效
 """
-import os, re, subprocess, sys
+import json, os, re, subprocess, sys
 
 HOME = os.path.expanduser('~')
 TABLE = os.path.join(HOME, 'Desktop/內部文件/網站重建/相片對照表.md')
@@ -25,6 +25,7 @@ def index_photos():
 def main():
     os.makedirs(OUT, exist_ok=True)
     photos = index_photos()
+    slots = json.load(open(os.path.join(ROOT, '_tools/slots.json'), encoding='utf-8'))
     done, missing, empty = [], [], []
     for line in open(TABLE, encoding='utf-8'):
         cells = [c.strip() for c in line.strip().strip('|').split('|')]
@@ -36,7 +37,7 @@ def main():
         src = photos.get(name.lower()) or photos.get(os.path.splitext(name)[0].lower())
         if not src:
             missing.append((slot, name)); continue
-        dst = os.path.join(OUT, slot + '.jpg')
+        dst = os.path.join(OUT, slots.get(slot, {}).get('file', slot + '.jpg'))
         subprocess.run(['sips', '-s', 'format', 'jpeg', '-s', 'formatOptions', '80',
                         '-Z', '1800', src, '--out', dst], check=True, capture_output=True)
         done.append((slot, name))

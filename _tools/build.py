@@ -59,7 +59,7 @@ TST = {
     'parentOrganization': {'@id': SITE + '/#org'},
     'url': SITE + '/campus/tsim-sha-tsui/',
     'telephone': '+852 9459 6420',
-    'image': SITE + '/assets/img/og-default.jpg',
+    'image': SITE + '/assets/img/pawradise-dog-hotel-academy-hong-kong.jpg',
     'address': {
         '@type': 'PostalAddress',
         'streetAddress': '彌敦道 200 號 16 至 17 樓及天台',
@@ -125,24 +125,34 @@ def faq_jsonld(content):
 
 def apply_slots(content):
     """相片位：assets/img/slots/<編號>.jpg 存在就用新相，否則保留現有相片或虛線框。"""
+    try:
+        SLOTS = json.load(open(os.path.join(ROOT, '_tools/slots.json'), encoding='utf-8'))
+    except OSError:
+        SLOTS = {}
+    def fname(slot):
+        return SLOTS.get(slot, {}).get('file', slot + '.jpg')
+    def alt(slot):
+        return html.escape(SLOTS.get(slot, {}).get('alt', ''))
     def has(slot):
-        return os.path.exists(os.path.join(ROOT, 'assets/img/slots', slot + '.jpg'))
+        return os.path.exists(os.path.join(ROOT, 'assets/img/slots', fname(slot)))
     def img_sub(m):
         tag, slot = m.group(0), m.group(1)
         if has(slot):
-            tag = re.sub(r'src="[^"]*"', 'src="/assets/img/slots/%s.jpg"' % slot, tag, 1)
+            tag = re.sub(r'src="[^"]*"', 'src="/assets/img/slots/%s"' % fname(slot), tag, 1)
+            if alt(slot):
+                tag = re.sub(r'alt="[^"]*"', 'alt="%s"' % alt(slot), tag, 1)
         return tag
     content = re.sub(r'<img data-slot="([^"]+)"[^>]*>', img_sub, content)
     def ph_sub(m):
         slot = m.group(1)
         if has(slot):
-            return '<img class="hc-ph-img" src="/assets/img/slots/%s.jpg" alt="" loading="lazy">' % slot
+            return '<img class="hc-ph-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), alt(slot))
         return m.group(0)
     content = re.sub(r'<div class="hc-ph" data-slot="([^"]+)">.*?</div>', ph_sub, content, flags=re.S)
     def rv_sub(m):
         slot = m.group(1)
         if has(slot):
-            return '<img class="hc-rv-img" src="/assets/img/slots/%s.jpg" alt="" loading="lazy">' % slot
+            return '<img class="hc-rv-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), alt(slot))
         return m.group(0)
     content = re.sub(r'<div class="hc-rv-ph" data-slot="([^"]+)">.*?</div>', rv_sub, content, flags=re.S)
     def logo_sub(m):
@@ -177,7 +187,7 @@ def render(layout, meta, content, url):
         'robots': 'noindex,nofollow' if (meta.get('noindex') or meta.get('draft')) else 'index,follow',
         'canonical': SITE + url,
         'hreflang': hreflang,
-        'og_image': SITE + meta.get('og_image', '/assets/img/og-default.jpg'),
+        'og_image': SITE + meta.get('og_image', '/assets/img/pawradise-dog-hotel-academy-hong-kong.jpg'),
         'og_locale': 'en_HK' if en else 'zh_HK',
         'jsonld': jsonld,
         'skip_text': 'Skip to content' if en else '跳到主要內容',
