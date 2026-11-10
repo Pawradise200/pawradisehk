@@ -444,3 +444,4 @@ footer.cf .wrap{display:block}
 .hc .hc-cases-note{text-align:center;font-size:14px;color:var(--ink-soft,#5a5a5a);margin:18px 0 0}
 .hc .hc-cases-note b{color:var(--navy,#1f2d4a)}
 .hc .hc-cases .scene{aspect-ratio:auto;height:170px;min-height:0}
+@media(max-width:760px){.hc .hc-hero h1.hc-one-line{white-space:nowrap;font-size:min(32px,calc(86vw / var(--n,11)))}}
