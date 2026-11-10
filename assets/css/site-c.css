@@ -239,3 +239,10 @@
   .hc-four.short::-webkit-scrollbar{display:none}
   .hc-four.short>div{flex:0 0 82%;scroll-snap-align:start}
 }
+/* 作息時間表：直向時間線 */
+.hc-timeline.t:before{left:7px}
+.hc-timeline.t li{padding:0 0 22px 36px}
+.hc-timeline.t .dot{width:15px;height:15px;top:4px;background:var(--gold);border-color:var(--gold)}
+.hc-timeline.t .when{display:block;font-family:var(--serif-en);font-size:17px;letter-spacing:.02em;text-transform:none;color:var(--navy);font-weight:600}
+.hc-timeline.t h3{font-size:17px;margin:2px 0 0}
+.hc-timeline.t h3 .en{font-size:14px;color:var(--muted);font-weight:400;margin-left:6px}
