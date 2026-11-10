@@ -341,3 +341,17 @@ footer.cf .wrap{display:block}
 @media(min-width:761px){.cf-group summary{pointer-events:none}.cf-group summary:after,.cf-group summary:before{content:none!important;display:none!important}}
 .hc-media .logo[data-logo="bf"] img{filter:invert(1) grayscale(1);opacity:.75}
 .hc-media .logo[data-logo="um"] img{height:40px}
+/* 口碑：拎走方框，一行過排列（同受訪媒體一致） */
+.hc-trust-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0}
+.hc-score,.hc-score.honour{background:none;border:0;border-top:0;padding:6px 34px;position:relative}
+.hc-score+.hc-score:before{content:"";position:absolute;left:0;top:18%;height:64%;width:1px;background:var(--line)}
+.hc-score b{font-size:40px}
+.hc-score b.t{font-size:18px;margin:6px 0 2px}
+.hc-trust .hc-media{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+@media(max-width:860px){
+  .hc-trust-grid{display:grid;grid-template-columns:1fr 1fr;row-gap:22px}
+  .hc-score{padding:6px 12px}
+  .hc-score+.hc-score:before{display:none}
+  .hc-score:nth-child(2n):before{display:block!important}
+}
+@media(max-width:860px){.hc-score b.t{font-size:15px;white-space:nowrap}.hc-score small{font-size:12px}}
