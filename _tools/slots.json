@@ -1,15 +1,18 @@
 {
  "home-hero-1": {
   "file": "pawradise-dog-school-hotel-hong-kong.jpg",
-  "alt": "Pawradise 校園內穿着校服的狗狗"
+  "alt": "柴犬同學閉上眼睛，安心享受導師溫柔撫摸",
+  "alt_en": "Shiba Inu student closing its eyes as a trainer gently strokes its chin at Pawradise"
  },
  "home-schools-1": {
   "file": "dog-social-academy-class-hong-kong.jpg",
-  "alt": "毛孩社交學院課堂"
+  "alt": "導師喺毛孩社交學院帶領狗狗上小組課",
+  "alt_en": "Trainer leading a small-group dog class at Pawradise Pet Social Academy"
  },
  "home-schools-2": {
   "file": "dog-hotel-social-time-tsim-sha-tsui.jpg",
-  "alt": "校園式寵物酒店社交時間"
+  "alt": "校園式寵物酒店社交時間：狗狗喺活動空間一齊玩",
+  "alt_en": "Dogs enjoying supervised social playtime at Pawradise Boarding House"
  },
  "home-values-1": {
   "file": "pawradise-team-dogs-tsim-sha-tsui.jpg",
@@ -17,31 +20,38 @@
  },
  "home-review-1": {
   "file": "parent-review-dog-1.jpg",
-  "alt": "學院學生（比熊犬）"
+  "alt": "學院學生（比熊犬）",
+  "alt_en": "Pawradise academy student (Bichon Frise)"
  },
  "home-review-2": {
   "file": "parent-review-dog-2.jpg",
-  "alt": "學院學生 Mungmung（貴婦犬）"
+  "alt": "學院學生 Mungmung（貴婦犬）",
+  "alt_en": "Pawradise academy student Mungmung (Poodle)"
  },
  "home-review-3": {
   "file": "parent-review-dog-3.jpg",
-  "alt": "學院學生 Bear Bear（松鼠犬）"
+  "alt": "學院學生 Bear Bear（松鼠犬）",
+  "alt_en": "Pawradise academy student Bear Bear (Pomeranian)"
  },
  "academy-hero-1": {
   "file": "dog-social-academy-hong-kong.jpg",
-  "alt": "毛孩社交學院狗狗上課"
+  "alt": "著校服嘅狗狗同學喺毛孩社交學院安靜等待",
+  "alt_en": "Dog kindergarten students in uniform waiting calmly at Pawradise Pet Social Academy"
  },
  "academy-path-1": {
   "file": "dog-kindergarten-s1-class-hong-kong.jpg",
-  "alt": "狗狗幼稚園 S1 智力課"
+  "alt": "狗狗幼稚園同學著校服一齊影班相",
+  "alt_en": "Pawradise dog kindergarten students in uniform posing together for a class photo"
  },
  "academy-path-2": {
   "file": "dog-emotional-reset-parent-class.jpg",
-  "alt": "情緒重建家長班：家長與狗狗練習"
+  "alt": "情緒重建家長班：導師同家長講解點樣讀懂毛孩情緒",
+  "alt_en": "Emotional reset parent class: a trainer explains to parents how to read their dog's emotions"
  },
  "academy-path-3": {
   "file": "calm-explorer-club-dog-outing.jpg",
-  "alt": "Calm Explorer Club 外出活動"
+  "alt": "Calm Explorer Club 外出活動：狗狗喺草地上探索",
+  "alt_en": "Calm Explorer Club outing: a dog exploring on the grass"
  },
  "academy-method-1": {
   "file": "dog-training-without-punishment.jpg",
@@ -49,55 +59,68 @@
  },
  "trial-hero-1": {
   "file": "dog-school-trial-day-assessment.jpg",
-  "alt": "招生日試堂：導師為新狗狗做入學評估"
+  "alt": "招生日試堂：導師手持評估表，細心觀察新同學比熊",
+  "alt_en": "Trial day at Pawradise: a trainer observes a new Bichon student with an assessment form"
  },
  "hotel-hero-1": {
   "file": "dog-hotel-tsim-sha-tsui-harbour-view.jpg",
-  "alt": "尖沙咀寵物酒店景觀活動空間"
+  "alt": "邊境牧羊犬同薩摩耶喺尖沙咀寵物酒店落地玻璃窗前曬太陽，背景係維港景色",
+  "alt_en": "Border collie and Samoyed basking in the sun by floor-to-ceiling windows with Victoria Harbour views at Pawradise dog hotel, Tsim Sha Tsui"
  },
  "hotel-care-1": {
   "file": "dog-hotel-group-play-time.jpg",
-  "alt": "寵物酒店狗狗分組自由活動"
+  "alt": "照顧員陪伴寄宿狗狗分組自由活動",
+  "alt_en": "Caregiver supervising small-group playtime for boarding dogs"
  },
  "hotel-care-2": {
   "file": "dog-boarding-check-in-assessment.jpg",
-  "alt": "寵物酒店入住登記及評估"
+  "alt": "家長同職員核對狗狗入住資料",
+  "alt_en": "Parent and staff going through check-in details for a boarding dog"
  },
  "hotel-care-3": {
   "file": "dog-hotel-daily-photo-update.jpg",
-  "alt": "照顧員為家長拍攝狗狗日常相片"
+  "alt": "照顧員用手機為家長拍攝狗狗日常相片",
+  "alt_en": "Caregiver taking a daily photo update of a boarding dog for its parent"
  },
  "hotel-care-4": {
   "file": "dog-boarding-private-room.jpg",
-  "alt": "寄宿狗狗在獨立房間休息"
+  "alt": "貴婦狗喺寵物酒店獨立房間床上休息",
+  "alt_en": "Poodle resting on its bed in a private dog hotel room"
  },
  "hotel-rooms-1": {
   "file": "dog-boarding-rooms-tsim-sha-tsui.jpg",
-  "alt": "寵物酒店獨立房間"
+  "alt": "Pawradise 寵物酒店一排獨立房間",
+  "alt_en": "Row of private dog boarding rooms at Pawradise"
  },
  "hotel-rooms-2": {
   "file": "dog-hotel-rooftop-tsim-sha-tsui.jpg",
-  "alt": "寵物酒店天台放風區"
+  "alt": "尖沙咀寵物酒店天台花園放風區日落景色",
+  "alt_en": "Rooftop dog run at sunset, Pawradise Tsim Sha Tsui"
  },
  "tst-hero-1": {
   "file": "pawradise-tsim-sha-tsui-campus.jpg",
-  "alt": "Pawradise 尖沙咀校區接待處"
+  "alt": "Pawradise 尖沙咀校區入口及發光校徽",
+  "alt_en": "Entrance and illuminated crest of Pawradise Tsim Sha Tsui campus"
  },
  "tst-services-1": {
   "file": "dog-school-tsim-sha-tsui.jpg",
-  "alt": "尖沙咀毛孩社交學院"
+  "alt": "尖沙咀毛孩社交學院：導師帶狗狗做社交練習",
+  "alt_en": "Social skills training at Pawradise Pet Social Academy, Tsim Sha Tsui"
  },
  "tst-services-2": {
   "file": "dog-hotel-tsim-sha-tsui.jpg",
-  "alt": "尖沙咀校園式寵物酒店"
+  "alt": "尖沙咀寵物酒店小型犬房間",
+  "alt_en": "Small dog room at Pawradise dog hotel, Tsim Sha Tsui"
  },
  "tst-space-1": {
   "file": "dog-play-area-tsim-sha-tsui.jpg",
-  "alt": "尖沙咀校區室內活動空間"
+  "alt": "尖沙咀校區陽光充足嘅室內活動空間",
+  "alt_en": "Sunlit indoor play space at Pawradise Tsim Sha Tsui campus"
  },
  "tst-space-2": {
   "file": "dog-rooftop-tsim-sha-tsui.jpg",
-  "alt": "尖沙咀校區天台"
+  "alt": "尖沙咀校區天台花園維港日落景色",
+  "alt_en": "Rooftop harbour sunset view at Pawradise Tsim Sha Tsui campus"
  },
  "skw-hero-1": {
   "file": "pawradise-shau-kei-wan-campus.jpg",
@@ -105,14 +128,37 @@
  },
  "home-review-4": {
   "file": "parent-review-dog-hotel-1.jpg",
-  "alt": "寄宿狗狗 Bearbear（松鼠犬）"
+  "alt": "寄宿狗狗 Bearbear（松鼠犬）",
+  "alt_en": "Boarding guest Bearbear (Pomeranian)"
  },
  "home-review-5": {
   "file": "parent-review-dog-hotel-2.jpg",
-  "alt": "寄宿狗狗（貴婦犬）"
+  "alt": "寄宿狗狗（貴婦犬）",
+  "alt_en": "Boarding guest (Poodle)"
  },
  "home-review-6": {
   "file": "parent-review-dog-hotel-3.jpg",
-  "alt": "寄宿狗狗（柴犬）"
+  "alt": "寄宿狗狗（柴犬）",
+  "alt_en": "Boarding guest (Shiba Inu)"
+ },
+ "hotel-rooms-3": {
+  "file": "dog-hotel-indoor-play-area-tsim-sha-tsui.jpg",
+  "alt": "寵物酒店室內活動空間，設狗狗遊樂設施",
+  "alt_en": "Indoor dog play area with play equipment at Pawradise"
+ },
+ "academy-moment-1": {
+  "file": "dog-meeting-other-dog-on-walk.jpg",
+  "alt": "散步時遇見其他狗狗，兩隻狗狗互相認識",
+  "alt_en": "Two dogs meeting and getting to know each other on a walk"
+ },
+ "academy-moment-2": {
+  "file": "dog-new-environment-first-day.jpg",
+  "alt": "初到校園，狗狗喺圍欄後面小心觀察新環境",
+  "alt_en": "On its first day, a dog watches the new environment cautiously from behind a fence"
+ },
+ "academy-moment-3": {
+  "file": "dogs-playing-excited-together.jpg",
+  "alt": "兩隻柴犬玩得好興奮",
+  "alt_en": "Two Shiba Inus getting very excited while playing together"
  }
 }

@@ -63,7 +63,7 @@ TST = {
     'image': SITE + '/assets/img/pawradise-dog-hotel-academy-hong-kong.jpg',
     'address': {
         '@type': 'PostalAddress',
-        'streetAddress': '彌敦道 200 號 16 至 17 樓及天台',
+        'streetAddress': '彌敦道 200 號 16 至 17 樓及天台花園',
         'addressLocality': '尖沙咀',
         'addressRegion': '九龍',
         'addressCountry': 'HK',
@@ -132,28 +132,29 @@ def apply_slots(content, en=False):
         SLOTS = {}
     def fname(slot):
         return SLOTS.get(slot, {}).get('file', slot + '.jpg')
-    def alt(slot):
-        return html.escape(SLOTS.get(slot, {}).get('alt', ''))
+    def alt(slot, en=False):
+        s = SLOTS.get(slot, {})
+        return html.escape(s.get('alt_en', '') if en else s.get('alt', ''))
     def has(slot):
         return os.path.exists(os.path.join(ROOT, 'assets/img/slots', fname(slot)))
     def img_sub(m):
         tag, slot = m.group(0), m.group(1)
         if has(slot):
             tag = re.sub(r'src="[^"]*"', 'src="/assets/img/slots/%s"' % fname(slot), tag, 1)
-            if alt(slot) and not en:
-                tag = re.sub(r'alt="[^"]*"', 'alt="%s"' % alt(slot), tag, 1)
+            if alt(slot, en):
+                tag = re.sub(r'alt="[^"]*"', 'alt="%s"' % alt(slot, en), tag, 1)
         return tag
     content = re.sub(r'<img data-slot="([^"]+)"[^>]*>', img_sub, content)
     def ph_sub(m):
-        slot = m.group(1)
+        extra, slot = m.group(1) or '', m.group(2)
         if has(slot):
-            return '<img class="hc-ph-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), '' if en else alt(slot))
+            return '<img class="hc-ph-img%s" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (extra, fname(slot), alt(slot, en))
         return m.group(0)
-    content = re.sub(r'<div class="hc-ph" data-slot="([^"]+)">.*?</div>', ph_sub, content, flags=re.S)
+    content = re.sub(r'<div class="hc-ph( [a-z-]+)?" data-slot="([^"]+)">.*?</div>', ph_sub, content, flags=re.S)
     def rv_sub(m):
         slot = m.group(1)
         if has(slot):
-            return '<img class="hc-rv-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), '' if en else alt(slot))
+            return '<img class="hc-rv-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), alt(slot, en))
         return m.group(0)
     content = re.sub(r'<div class="hc-rv-ph" data-slot="([^"]+)">.*?</div>', rv_sub, content, flags=re.S)
     def logo_sub(m):

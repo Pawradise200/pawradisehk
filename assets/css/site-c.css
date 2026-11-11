@@ -488,3 +488,6 @@ footer.cf .wrap{display:block}
 .hc .hc-visit-cta{margin-top:24px}
 .hc .hc-visit-cta p{margin:0 0 12px}
 @media(max-width:760px){.hc .hc-gallery3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px}.hc .hc-gallery3 figure{flex:0 0 80%;scroll-snap-align:start}}
+
+.hc .hc-cases img.scene{width:calc(100% + 48px);max-width:none;object-fit:cover;display:block;border:0}
+.hc .hc-ph-img{max-width:none}
