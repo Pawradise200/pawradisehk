@@ -455,3 +455,36 @@ footer.cf .wrap{display:block}
 .hc-sec,.sec{padding:56px 0}
 .hc-head{margin-bottom:28px}
 @media(max-width:760px){.hc-sec,.sec{padding:40px 0}.hc-head{margin-bottom:20px}}
+/* 學院頁：進步看得見（方案C） */
+.hc .hc-progress{background:var(--navy);color:var(--cream);border-radius:var(--r-card,14px);padding:36px;display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:center}
+.hc .hc-progress .big b{display:block;font-family:var(--serif-en,serif);font-size:84px;line-height:1;color:var(--gold)}
+.hc .hc-progress .big span{display:block;font-size:18px;margin-top:10px}
+.hc .hc-progress .big small{display:block;font-size:12px;opacity:.7;margin-top:8px}
+.hc .hc-progress ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.hc .hc-progress li{border-left:1px solid rgba(245,240,232,.2);padding-left:20px}
+.hc .hc-progress .ic svg{width:40px;height:40px;fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hc .hc-progress h3{color:var(--cream);margin:8px 0 4px;font-size:18px}
+.hc .hc-progress p{margin:0;font-size:14px;opacity:.85}
+.hc .hc-progress .ft{margin-top:10px;opacity:1;font-size:13px;display:flex;flex-direction:column;gap:2px}
+.hc .hc-progress .ft span{opacity:.65}
+.hc .hc-progress .ft .to{opacity:1;color:var(--gold)}
+.hc .hc-progress .ft .to::before{content:"→ "}
+.hc #progress .hc-intro{margin-top:20px}
+@media(max-width:900px){.hc .hc-progress{grid-template-columns:1fr;padding:28px 22px;gap:24px}.hc .hc-progress ul{grid-template-columns:1fr;gap:18px}.hc .hc-progress li{border-left:0;border-top:1px solid rgba(245,240,232,.2);padding:16px 0 0;display:grid;grid-template-columns:44px 1fr;column-gap:12px}.hc .hc-progress li .ic{grid-row:span 3}.hc .hc-progress h3{margin-top:0}}
+/* 酒店頁：橫向作息表 */
+.hc .hc-day{list-style:none;margin:0;padding:0 0 8px;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.hc .hc-day::before{content:"";position:absolute;left:0;right:0;top:7px;border-top:1px solid var(--gold)}
+.hc .hc-day li{position:relative;padding-top:26px;text-align:center}
+.hc .hc-day .dot{position:absolute;top:0;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--paper,#f5f0e8);border:1.5px solid var(--gold)}
+.hc .hc-day .when{display:block;font-size:13px;color:var(--gold);letter-spacing:.04em}
+.hc .hc-day h3{font-size:16px;margin:4px 0 0}
+.hc .hc-day-note{font-size:13px;color:var(--ink-soft,#5a5a5a);margin:18px 0 0;max-width:760px}
+@media(max-width:760px){.hc .hc-day{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 8px}.hc .hc-day li{flex:0 0 96px;scroll-snap-align:start}.hc .hc-day::before{left:16px;right:auto;width:768px}}
+/* 酒店頁：環境三相＋預約參觀 */
+.hc .hc-gallery3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hc .hc-gallery3 figure{margin:0}
+.hc .hc-gallery3 img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-card,14px);display:block}
+.hc .hc-gallery3 figcaption{font-size:14px;margin-top:8px}
+.hc .hc-visit-cta{margin-top:24px}
+.hc .hc-visit-cta p{margin:0 0 12px}
+@media(max-width:760px){.hc .hc-gallery3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px}.hc .hc-gallery3 figure{flex:0 0 80%;scroll-snap-align:start}}
