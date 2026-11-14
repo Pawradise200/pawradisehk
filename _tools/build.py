@@ -29,8 +29,8 @@ NAV_ZH = [
     ('/academy/', '毛孩社交學院'),
     ('/academy/trial/', '體驗試堂'),
     ('/hotel/', '校園式寵物酒店'),
+    ('/faq/', '常見問題'),
     ('/about/', '關於我們'),
-    ('/parents/', '家長專區'),
 ]
 NAV_EN = [
     ('/en/', 'Home'),

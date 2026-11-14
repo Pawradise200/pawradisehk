@@ -276,6 +276,7 @@
 @media(max-width:860px){.hc-trust-grid{grid-template-columns:1fr 1fr}}
 /* 校訓（精簡） */
 .hc-values2{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hc-values2:has(> .hc-ph[style*="display:none"]){grid-template-columns:1fr}
 .hc-values2 .hc-ph{margin:0;aspect-ratio:4/3}
 .hc-values2 .hc-ph-img{width:100%;margin:0}
 .hc-vlist{list-style:none;padding:0;margin:0 0 26px;border-top:1px solid var(--line)}
@@ -356,6 +357,22 @@ footer.cf .wrap{display:block}
 }
 @media(max-width:860px){.hc-score b.t{font-size:15px;white-space:nowrap}.hc-score small{font-size:12px}}
 
+/* 內頁頁首（無主相）、跳轉連結、故事引句：關於／FAQ／家長專區（2026-11-15） */
+.hc-pagehead{padding-bottom:30px}
+.hc-pagehead h1{font-size:clamp(30px,3.6vw,46px);margin:10px 0 14px}
+.hc-pagehead .hc-intro{margin:0 0 24px}
+.hc-jump{display:flex;flex-wrap:wrap;gap:10px}
+.hc-jump a{border:1px solid var(--line);background:#fff;color:var(--navy);padding:8px 18px;border-radius:999px;font-size:14px}
+.hc-story{max-width:760px}
+.hc-story p{color:var(--muted);margin:0 0 18px;line-height:2}
+.hc-pull{margin:30px 0;padding:6px 0 6px 24px;border-left:2px solid var(--gold);font-family:var(--serif-zh);font-size:21px;line-height:1.8;color:var(--navy)}
+.hc-years .caps{display:block;color:var(--gold)}
+.hc-steps .hc-link{display:inline-block;margin-top:12px}
+
+/* 學院「進步看得見」主題句（2026-11-15）：不比較，只記錄自己進度 */
+.hc .hc-progress .big.theme .lead{font-size:15px;letter-spacing:.08em;opacity:.75;margin:0 0 8px}
+.hc .hc-progress .big.theme b{font-family:var(--serif-zh);font-size:clamp(26px,2.6vw,32px);line-height:1.45}
+.hc .hc-progress .big.theme span:last-child{font-size:15px;opacity:.85}
 /* === 字體設定（由網站工作台控制；套用時只改呢個區塊） === */
 :root{--fs-h1:52px;--fs-h2:34px;--fs-h3:20px;--fs-body:16px;--lh-body:1.9}
 /* === 字體設定完 === */
