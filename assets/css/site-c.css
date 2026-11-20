@@ -629,3 +629,5 @@ footer.cf .wrap{display:block}
 #letter .hc-note{margin:0;transform:none;background:#fff;border-radius:0;box-shadow:0 10px 30px rgba(92,62,39,.12);padding:64px 56px 60px;border-left:1px solid #eee6d8;border-right:1px solid #eee6d8}
 #letter .hc-note:after{display:none}
 @media (max-width:760px){#letter .hc-letter.solo:before,#letter .hc-letter.solo:after{left:-6px;right:-6px;height:24px}#letter .hc-note{padding:52px 24px 48px}}
+/* 英文頁手機版：口碑格唔撐闊（2026-11-20） */
+@media (max-width:760px){.hc-trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hc-trust-grid>*{min-width:0}.hc-trust-grid small{overflow-wrap:anywhere}}
