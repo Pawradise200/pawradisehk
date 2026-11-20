@@ -7,6 +7,8 @@
 - 輸出：assets/img/slots/<SEO 檔名>（見 _tools/slots.json）（長邊 1800px）；之後行 build.py 即生效
 """
 import json, os, re, subprocess, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from grade import grade_file
 
 HOME = os.path.expanduser('~')
 TABLE = os.path.join(HOME, 'Desktop/內部文件/網站重建/相片對照表.md')
@@ -40,6 +42,7 @@ def main():
         dst = os.path.join(OUT, slots.get(slot, {}).get('file', slot + '.jpg'))
         subprocess.run(['sips', '-s', 'format', 'jpeg', '-s', 'formatOptions', '80',
                         '-Z', '1800', src, '--out', dst], check=True, capture_output=True)
+        grade_file(dst)  # 統一色調（_tools/grade.py）
         done.append((slot, name))
     print('✅ 已換 %d 張' % len(done))
     for s, n in done: print('   %s ← %s' % (s, n))

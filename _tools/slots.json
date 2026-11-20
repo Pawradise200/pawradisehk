@@ -59,8 +59,8 @@
  },
  "trial-hero-1": {
   "file": "dog-school-trial-day-assessment.jpg",
-  "alt": "招生日試堂：導師手持評估表，細心觀察新同學比熊",
-  "alt_en": "Trial day at Pawradise: a trainer observes a new Bichon student with an assessment form"
+  "alt": "體驗試堂：導師與家長懷中的博美狗狗打招呼",
+  "alt_en": "Trial day at Pawradise: a trainer greets a Pomeranian held by its parent"
  },
  "hotel-hero-1": {
   "file": "dog-hotel-tsim-sha-tsui-harbour-view.jpg",
@@ -104,12 +104,12 @@
  },
  "tst-services-1": {
   "file": "dog-school-tsim-sha-tsui.jpg",
-  "alt": "尖沙咀毛孩社交學院：導師帶狗狗做社交練習",
+  "alt": "尖沙咀毛孩社交學院：導師陪伴狗狗在維港景觀空間休息",
   "alt_en": "Social skills training at Pawradise Pet Social Academy, Tsim Sha Tsui"
  },
  "tst-services-2": {
   "file": "dog-hotel-tsim-sha-tsui.jpg",
-  "alt": "尖沙咀寵物酒店小型犬房間",
+  "alt": "尖沙咀寵物酒店：柴犬在天台奔跑",
   "alt_en": "Small dog room at Pawradise dog hotel, Tsim Sha Tsui"
  },
  "tst-space-1": {
@@ -160,5 +160,96 @@
   "file": "dogs-playing-excited-together.jpg",
   "alt": "兩隻柴犬玩得好興奮",
   "alt_en": "Two Shiba Inus getting very excited while playing together"
+ },
+ "academy-review-4": {
+  "file": "parent-review-dog-4.jpg",
+  "alt": "學院學生 Loki（史納莎）",
+  "alt_en": "Pawradise academy student Loki (Schnauzer)"
+ },
+ "academy-review-5": {
+  "file": "parent-review-dog-5.jpg",
+  "alt": "學院學生 TaeTae & Kumo（貴婦犬）",
+  "alt_en": "Pawradise academy students TaeTae & Kumo (Poodles)"
+ },
+ "hotel-review-1": {
+  "file": "parent-review-dog-hotel-4.jpg",
+  "alt": "寄宿狗狗（柴犬與白色唐狗）",
+  "alt_en": "Boarding guests (Shiba Inu and friend)"
+ },
+ "hotel-review-2": {
+  "file": "parent-review-dog-hotel-5.jpg",
+  "alt": "寄宿狗狗波仔（比熊犬）",
+  "alt_en": "Boarding guest Bo Jai (Bichon Frise)"
+ },
+ "hotel-review-3": {
+  "file": "parent-review-dog-hotel-6.jpg",
+  "alt": "寄宿狗狗的獨立房間",
+  "alt_en": "A boarding guest's private room"
+ },
+ "hotel-review-4": {
+  "file": "parent-review-dog-hotel-7.jpg",
+  "alt": "寄宿狗狗（白色博美犬）",
+  "alt_en": "Boarding guest (white Pomeranian)"
+ },
+ "about-founder-2": {
+  "file": "about-pawradise-cofounder.jpg",
+  "alt": "Pawradise 聯合創辦人 Erica",
+  "alt_en": "Pawradise co-founder Erica"
+ },
+ "about-founder-1": {
+  "file": "about-pawradise-founder.jpg",
+  "alt": "Pawradise 創辦人",
+  "alt_en": "Pawradise founder"
+ },
+ "about-year-1": {
+  "file": "pawradise-history-1.jpg",
+  "alt": "Pawradise 發展歷程相片",
+  "alt_en": "Pawradise history photo"
+ },
+ "about-year-2": {
+  "file": "pawradise-history-2.jpg",
+  "alt": "Pawradise 發展歷程相片",
+  "alt_en": "Pawradise history photo"
+ },
+ "about-year-3": {
+  "file": "pawradise-history-3.jpg",
+  "alt": "Pawradise 發展歷程相片",
+  "alt_en": "Pawradise history photo"
+ },
+ "about-year-4": {
+  "file": "pawradise-history-4.jpg",
+  "alt": "Pawradise 發展歷程相片",
+  "alt_en": "Pawradise history photo"
+ },
+ "about-year-5": {
+  "file": "pawradise-history-5.jpg",
+  "alt": "Pawradise 發展歷程相片",
+  "alt_en": "Pawradise history photo"
+ },
+ "about-year-6": {
+  "file": "pawradise-history-6.jpg",
+  "alt": "Pawradise 發展歷程相片",
+  "alt_en": "Pawradise history photo"
+ },
+ "about-year-7": {
+  "file": "pawradise-history-7.jpg",
+  "alt": "Pawradise 發展歷程相片",
+  "alt_en": "Pawradise history photo"
+ },
+ "trial-step-1": {
+  "file": "dog-school-trial-meet-trainer.jpg",
+  "alt": "試堂：比熊同學開心走進校園"
+ },
+ "trial-step-2": {
+  "file": "dog-school-trial-parent-class.jpg",
+  "alt": "試堂：導師為家長講解狗狗的身體語言"
+ },
+ "trial-step-3": {
+  "file": "dog-school-trial-social-assessment.jpg",
+  "alt": "試堂：導師手持評估表，記錄比熊同學的表現"
+ },
+ "trial-step-4": {
+  "file": "dog-school-trial-assessment-report.jpg",
+  "alt": "試堂：導師向家長講解狗狗的評估報告"
  }
 }

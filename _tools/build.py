@@ -27,7 +27,6 @@ REDIRECTS = {
 
 NAV_ZH = [
     ('/academy/', '毛孩社交學院'),
-    ('/academy/trial/', '體驗試堂'),
     ('/hotel/', '校園式寵物酒店'),
     ('/faq/', '常見問題'),
     ('/about/', '關於我們'),
@@ -58,7 +57,7 @@ TST = {
     'name': 'Pawradise 尖沙咀校區',
     'description': '校園式寵物酒店及毛孩社交學院',
     'parentOrganization': {'@id': SITE + '/#org'},
-    'url': SITE + '/campus/tsim-sha-tsui/',
+    'url': SITE + '/',
     'telephone': '+852 9459 6420',
     'image': SITE + '/assets/img/pawradise-dog-hotel-academy-hong-kong.jpg',
     'address': {
@@ -148,13 +147,13 @@ def apply_slots(content, en=False):
     def ph_sub(m):
         extra, slot = m.group(1) or '', m.group(2)
         if has(slot):
-            return '<img class="hc-ph-img%s" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (extra, fname(slot), alt(slot, en))
+            return '<img class="hc-ph-img%s" data-slot="%s" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (extra, slot, fname(slot), alt(slot, en))
         return m.group(0)
     content = re.sub(r'<div class="hc-ph( [a-z-]+)?" data-slot="([^"]+)">.*?</div>', ph_sub, content, flags=re.S)
     def rv_sub(m):
         slot = m.group(1)
         if has(slot):
-            return '<img class="hc-rv-img" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (fname(slot), alt(slot, en))
+            return '<img class="hc-rv-img" data-slot="%s" src="/assets/img/slots/%s" alt="%s" loading="lazy">' % (slot, fname(slot), alt(slot, en))
         return m.group(0)
     content = re.sub(r'<div class="hc-rv-ph" data-slot="([^"]+)">.*?</div>', rv_sub, content, flags=re.S)
     def logo_sub(m):

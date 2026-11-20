@@ -373,6 +373,15 @@ footer.cf .wrap{display:block}
 .hc .hc-progress .big.theme .lead{font-size:15px;letter-spacing:.08em;opacity:.75;margin:0 0 8px}
 .hc .hc-progress .big.theme b{font-family:var(--serif-zh);font-size:clamp(26px,2.6vw,32px);line-height:1.45}
 .hc .hc-progress .big.theme span:last-child{font-size:15px;opacity:.85}
+/* 區與區間距統一（2026-11-15）：每節最後一行唔再額外留白；同底色相連兩節唔重複上下留白 */
+.hc-sec .wrap>:last-child,.hc-sec .wrap>:last-child>:last-child{margin-bottom:0}
+.hc-sec:not(.hc-cream):not(.hc-navy):not(.hc-invite)+.hc-sec:not(.hc-cream):not(.hc-navy):not(.hc-invite){padding-top:0}
+.hc-cream+.hc-cream{padding-top:0}
+.hc .hc-progress .big.theme .selfstat{display:flex;align-items:baseline;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(245,240,232,.2)}
+.hc .hc-progress .big.theme .selfstat b{white-space:nowrap;flex:none;display:inline-block;font-family:var(--serif-en,serif);font-size:56px;line-height:1;color:var(--gold)}
+.hc .hc-progress .big.theme .selfstat b small{display:inline;font-size:.5em;opacity:.8}
+.hc .hc-progress .big.theme .selfstat span{font-size:14px;opacity:.9;margin:0}
+.hc .hc-progress .big.theme .fn{display:block;font-size:12px;opacity:.65;margin-top:8px}
 /* === 字體設定（由網站工作台控制；套用時只改呢個區塊） === */
 :root{--fs-h1:52px;--fs-h2:34px;--fs-h3:20px;--fs-body:16px;--lh-body:1.9}
 /* === 字體設定完 === */
@@ -508,3 +517,102 @@ footer.cf .wrap{display:block}
 
 .hc .hc-cases img.scene{width:calc(100% + 48px);max-width:none;object-fit:cover;display:block;border:0}
 .hc .hc-ph-img{max-width:none}
+/* 進步：主題＋百分比在上，三大指標在下（2026-11-15） */
+.hc .hc-progress{grid-template-columns:1fr;align-items:start}
+.hc .hc-progress .big.theme{max-width:720px}
+.hc .hc-progress .ind-label{color:var(--gold);font-size:15px;letter-spacing:.08em;margin:6px 0 -8px;padding-top:24px;border-top:1px solid rgba(245,240,232,.2)}
+.hc .hc-progress .big.theme .selfstat{margin-top:0;padding-top:0;border-top:0}
+.hc .hc-progress .ind-label{color:var(--cream);font-size:16px;letter-spacing:0;opacity:.9}
+/* 三大指標「由…▶ 到…」排一行（2026-11-15） */
+.hc .hc-progress .ft{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:6px}
+.hc .hc-progress .ft .to::before{content:"▶ ";color:var(--gold)}
+/* 酒店作息表：頭尾太陽月亮、備注分三項（2026-11-15） */
+.hc .hc-day{grid-template-columns:44px repeat(8,1fr) 44px}
+.hc .hc-day li.edge{padding-top:0;display:flex;justify-content:center}
+.hc .hc-day li.edge svg{width:30px;height:30px;margin-top:-8px;background:var(--cream);fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hc .hc-day li.edge:last-child svg{fill:var(--gold);stroke:none}
+.hc ul.hc-day-note{list-style:none;padding:0;display:grid;gap:6px;margin-top:22px}
+.hc ul.hc-day-note li{position:relative;padding-left:16px}
+.hc ul.hc-day-note li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+@media(max-width:760px){.hc .hc-day li.edge{flex:0 0 44px}}
+/* 關於我們：信件無相、故事小標題 */
+.hc .hc-letter.solo{grid-template-columns:1fr;max-width:760px}
+.hc-story .hc-sub{font-size:20px;color:var(--navy);margin:34px 0 10px}
+.hc-story .hc-head+.hc-sub{margin-top:0}
+/* 口碑：彩色 logo；發展歷程相片位 */
+.logo-slot img{filter:none;opacity:1;max-height:36px}
+.logo-slot.bf img{filter:invert(1)}
+.hc-years .hc-ph.yr,.hc-years .hc-ph-img.yr{margin:12px 0 0;max-width:320px;aspect-ratio:4/3;font-size:13px}
+.hc-years .hc-ph-img.yr{width:100%;object-fit:cover;border-radius:var(--r-img);display:block}
+@media (min-width:761px){.ratings{grid-template-columns:repeat(4,1fr);max-width:1100px}}
+#founder .hc-ph.founder,#founder .hc-ph-img.founder{margin:0;aspect-ratio:4/5;width:100%;object-fit:cover;object-position:center 30%;border-radius:var(--r-img);display:block}
+/* 關於我們：校訓下方兩項信念 */
+.hc-navy .hc-beliefs{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:860px;margin:44px auto 0;padding-top:32px;border-top:1px solid rgba(255,255,255,.18)}
+.hc-navy .hc-beliefs h3{font-size:18px;color:var(--gold);margin:0 0 6px}
+.hc-navy .hc-beliefs p{margin:0;opacity:.85;font-size:15px;line-height:1.8}
+@media (max-width:760px){.hc-navy .hc-beliefs{grid-template-columns:1fr;gap:18px}}
+/* 關於我們：致家長信——由信封抽出的一封信 */
+#letter .hc-letter.solo{position:relative;max-width:720px;margin:0 auto;padding:0 0 96px}
+#letter .hc-letter.solo:before{content:"";position:absolute;left:0;right:0;bottom:0;height:190px;background:var(--navy);border-radius:10px;box-shadow:0 18px 40px rgba(92,62,39,.18)}
+#letter .hc-letter.solo:after{content:"";position:absolute;left:0;right:0;bottom:0;height:190px;border-radius:10px;background:linear-gradient(160deg,transparent 49.6%,rgba(255,255,255,.07) 50%) left/50% 100% no-repeat,linear-gradient(200deg,transparent 49.6%,rgba(255,255,255,.07) 50%) right/50% 100% no-repeat;z-index:2;pointer-events:none}
+#letter .hc-note{z-index:1;margin:0 28px;overflow:visible;border:0;border-radius:3px;background:#FFFDF8 url(../img/paper.jpg) center/640px;box-shadow:0 10px 30px rgba(92,62,39,.16);transform:rotate(-1deg);padding:64px 64px 56px}
+#letter .hc-note:before{left:34px;top:4px}
+#letter .hc-note:after{content:"";position:absolute;right:30px;bottom:-26px;width:64px;height:54px;background:url(../img/crest.png) center/contain no-repeat;filter:drop-shadow(0 4px 6px rgba(92,62,39,.25));z-index:3}
+#letter .hc-note .sig{margin-right:60px}
+@media (max-width:760px){
+  #letter .hc-letter.solo{padding-bottom:70px}
+  #letter .hc-letter.solo:before,#letter .hc-letter.solo:after{height:140px}
+  #letter .hc-note{margin:0 12px;padding:48px 24px 44px;transform:rotate(-.6deg)}
+  #letter .hc-note .sig{margin-right:44px}
+}
+/* 信封前袋蓋住信紙底部 */
+#letter .hc-letter.solo{padding-bottom:70px}
+#letter .hc-letter.solo:before{height:200px;background:#17283F}
+#letter .hc-letter.solo:after{height:170px;background:var(--navy);clip-path:polygon(0 0,50% 42%,100% 0,100% 100%,0 100%);border-radius:0 0 10px 10px;box-shadow:none}
+#letter .hc-note{padding-bottom:150px}
+#letter .hc-note:after{right:auto;left:50%;bottom:-40px;margin-left:-34px;width:68px;height:58px}
+#letter .hc-note .sig{margin-right:0}
+@media (max-width:760px){
+  #letter .hc-letter.solo{padding-bottom:50px}
+  #letter .hc-letter.solo:before{height:150px}
+  #letter .hc-letter.solo:after{height:125px}
+  #letter .hc-note{padding-bottom:120px}
+  #letter .hc-note:after{bottom:-30px}
+}
+#letter .hc-note:after{display:none}
+#letter .hc-letter.solo:after{background:url(../img/crest.png) 50% 70%/64px auto no-repeat,var(--navy)}
+@media (max-width:760px){#letter .hc-letter.solo:after{background-size:48px auto,auto}}
+
+/* 關於我們創辦人段：內文縮細（2026-11-20 工作台意見） */
+#founder .hc-note p.letter{font-size:16px;line-height:1.9}
+
+/* 試堂頁：流程相片＋評估報告樣本（2026-11-20） */
+.trial-photos{margin-top:36px}
+.trial-photos .hc-ph{margin:0;aspect-ratio:4/3}
+.trial-report{align-items:center}
+.trial-report{grid-template-columns:minmax(0,380px) 1fr;justify-content:center}
+.trial-report>img{aspect-ratio:auto;height:auto;box-shadow:0 14px 34px rgba(92,62,39,.16);transform:rotate(-1.5deg);border-radius:6px}
+.trial-report h3{font-size:24px;margin-bottom:12px}
+.trial-report p{margin-top:12px}
+.trial-report .trial-offer{color:var(--navy);font-weight:500}
+.trial-report .btn{margin-top:20px}
+@media (max-width:760px){.trial-report{grid-template-columns:1fr}.trial-photos{grid-template-columns:1fr 1fr;gap:12px}.trial-report>img{max-width:320px;margin:0 auto}}
+
+/* 三大指標：箭咀同改變後文字一律金色（2026-11-20 工作台意見） */
+.hc .hc-progress .ft .to{opacity:1;color:var(--gold)}
+.hc .hc-progress .ft .to::before{content:"\25B6\FE0E  ";color:var(--gold)}
+/* 試堂流程相：細圖（2026-11-20） */
+.trial-photos{gap:16px}
+.trial-photos>img,.trial-photos .hc-ph-img{width:100%;aspect-ratio:3/2;height:auto;object-fit:cover;border-radius:var(--r-img);margin:0;padding:0;box-shadow:none;border:0}
+/* 試堂流程相放入每一步下面（2026-11-20） */
+.trial-steps .hc-ph-img{display:block;width:100%;aspect-ratio:3/2;height:auto;object-fit:cover;border-radius:var(--r-img);margin-top:14px}
+.trial-steps .hc-ph{margin:14px 0 0;aspect-ratio:3/2}
+.tst-floors{grid-template-columns:repeat(3,1fr)}
+@media (max-width:760px){.tst-floors{grid-template-columns:1fr}}
+/* 試堂上學前準備四格＋圖案（2026-11-20） */
+.trial-prep{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trial-prep li{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:28px 20px;text-align:center}
+.trial-prep .ic svg{width:44px;height:44px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trial-prep h3{font-size:18px;margin:12px 0 4px}
+.trial-prep p{color:var(--muted);font-size:14px;margin:0}
+@media (max-width:760px){.trial-prep{grid-template-columns:1fr 1fr;gap:12px}.trial-prep li{padding:20px 12px}}
