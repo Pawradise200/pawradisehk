@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>首頁 C 家族</title><link rel="stylesheet" href="base.css">
+<style>
+body{background:var(--paper) url(/assets/img/paper.jpg)}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+header nav{display:flex;gap:30px;font-size:14px;letter-spacing:.14em}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--caps);letter-spacing:.32em}.logo img{width:38px}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:86vh}
+.hero .txt{display:flex;flex-direction:column;justify-content:center;padding:60px 8vw 60px 6vw}
+.hero h1{font-size:clamp(32px,4vw,54px);line-height:1.35;margin:18px 0 22px}
+.hero h1 em{font-family:var(--serif-en);font-style:italic;font-weight:400;display:block;font-size:.62em;color:var(--sage);letter-spacing:.02em}
+.hero p{color:var(--muted);max-width:430px;margin-bottom:34px}
+.hero .ph{position:relative}
+.hero .ph img{width:100%;height:100%}
+.hero .ph .card{position:absolute;left:-60px;bottom:60px;background:var(--paper);padding:22px 26px;box-shadow:var(--shadow);max-width:250px;font-size:14px}
+.hero .ph .card b{font-family:var(--serif-en);font-size:30px;font-weight:500;display:block;line-height:1}
+.sec{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px;border-bottom:1px solid var(--line);padding-bottom:18px}
+.head h2{font-size:clamp(26px,2.8vw,36px)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.card2 img{width:100%;aspect-ratio:3/2}
+.card2 .bd{background:#fff;padding:34px;border:1px solid var(--line);border-top:3px solid var(--gold)}
+.card2 h3{font-size:24px;margin:8px 0 10px}
+.card2 p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.card2 .more{font-family:var(--serif-en);font-style:italic;font-size:18px;border-bottom:1px solid currentColor}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.mosaic figure{position:relative}
+.mosaic img{width:100%;height:100%}
+.mosaic figcaption{font-family:var(--serif-en);font-style:italic;font-size:16px;margin-top:8px;color:var(--muted)}
+.m1{grid-column:1/6}.m1 img{aspect-ratio:4/5}.m2{grid-column:6/13}.m2 img{aspect-ratio:16/10}
+.m3{grid-column:1/5}.m3 img{aspect-ratio:1}.m4{grid-column:5/9}.m4 img{aspect-ratio:1}.m5{grid-column:9/13}.m5 img{aspect-ratio:1}
+.navy{background:var(--navy);color:var(--cream)}
+.navy .why{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
+.navy .why b{font-family:var(--serif-en);font-style:italic;font-size:24px;color:var(--gold);font-weight:400}
+.navy h3{font-size:20px;margin:10px 0}.navy p{opacity:.8;font-size:15px}
+.letter{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.letter .note{background:#fff;padding:56px;box-shadow:var(--shadow);border:1px solid var(--line);position:relative}
+.letter .note:before{content:"“";position:absolute;top:-10px;left:28px;font-family:var(--serif-en);font-size:110px;color:var(--gold);line-height:1}
+.letter .note p{font-family:var(--serif-zh);font-size:19px;line-height:2}
+.letter .note .sig{font-family:var(--serif-en);font-style:italic;font-size:20px;margin-top:22px;text-align:right}
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.voices blockquote{border-left:2px solid var(--gold);padding-left:22px;font-family:var(--serif-zh);font-size:17px;line-height:1.9}
+.voices cite{display:block;margin-top:14px;font-style:normal;font-size:13px;color:var(--muted)}
+.end{text-align:center;padding:110px 0;border-top:1px solid var(--line)}
+.end h2{font-size:32px;margin:10px 0 28px}
+footer{text-align:center;padding:36px 16px;font-size:13px;color:var(--muted)}
+@media(max-width:760px){header nav{display:none}.hero{grid-template-columns:1fr}.hero .ph{order:-1;aspect-ratio:4/5}.hero .ph .card{left:16px;bottom:-30px}.hero .txt{padding:60px 16px 40px}.cards,.navy .why,.letter,.voices{grid-template-columns:1fr}.mosaic>*{grid-column:1/13!important}.sec{padding:72px 0}.letter .note{padding:40px 26px}.head{display:block}}
+</style></head><body>
+<div class="tag">版本 C｜家族（Ralph Lauren 生活感＋學府細節）</div>
+<header><div class="wrap"><a class="logo"><img src="/assets/img/crest.png" alt="">PAWRADISE</a><nav><a>社交學院</a><a>寵物酒店</a><a>校園生活</a><a>關於我們</a><a class="btn btn-solid" style="padding:9px 20px">WhatsApp 查詢</a></nav></div></header>
+<section class="hero"><div class="txt"><span class="caps">Est. 2021 · Calm · Respect · Together</span><h1><em>Every dog, truly understood.</em>讓每一位毛孩<br>被好好理解</h1><p>校園式寵物酒店及毛孩社交學院。先了解毛孩的性格與情緒，再安排照顧與學習，讓毛孩自在成長，也讓家長安心。</p><div><a class="btn btn-solid">了解社交學院</a> <a class="btn" style="margin-left:8px">了解寵物酒店</a></div></div>
+<div class="ph"><img src="/assets/img/academy-school.jpg" alt=""><div class="card"><b>500+</b>位毛孩學生在 Pawradise 學習社交與生活</div></div></section>
+<section class="sec"><div class="wrap"><div class="head"><div><span class="caps">Our Schools</span><h2>兩所校園，同一份用心</h2></div><span class="en">尖沙咀・筲箕灣</span></div>
+<div class="cards"><a class="card2"><img src="/assets/img/academy-dogs.jpg" alt=""><div class="bd"><span class="caps" style="color:var(--sage)">Pet Social Academy</span><h3>毛孩社交學院</h3><p>狗狗幼稚園・情緒重建家長班・Calm Explorer Club。重視的不是技能，而是一起生活的能力。</p><span class="more">Discover the Academy</span></div></a>
+<a class="card2"><img src="/assets/img/env2.jpg" alt=""><div class="bd"><span class="caps" style="color:var(--dusty)">Boarding House</span><h3>校園式寵物酒店</h3><p>持牌動物寄養所・風險評級分組・每日社交時間・24 小時獨立 CCTV。</p><span class="more">Discover the Hotel</span></div></a></div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="head"><div><span class="caps">School Life</span><h2>校園裡的一天</h2></div><span class="en">A day at Pawradise</span></div>
+<div class="mosaic"><figure class="m1"><img src="/assets/img/academy-card3.jpg" alt=""><figcaption>Morning class</figcaption></figure><figure class="m2"><img src="/assets/img/env1.jpg" alt=""><figcaption>Playtime with friends</figcaption></figure><figure class="m3"><img src="/assets/img/academy-sq.jpg" alt=""><figcaption>Classmates</figcaption></figure><figure class="m4"><img src="/assets/img/env-rooftop.jpg" alt=""><figcaption>The rooftop</figcaption></figure><figure class="m5"><img src="/assets/img/about-sq.jpg" alt=""><figcaption>Nap time</figcaption></figure></div></div></section>
+<section class="sec navy"><div class="wrap"><span class="caps">Why Pawradise</span><h2 style="font-size:32px;margin:12px 0 50px">我們有什麼不同</h2><div class="why"><div><b>i.</b><h3>先評估，再分組</h3><p>入學評估及風險評級，每一位毛孩都在合適的同伴與節奏中活動。</p></div><div><b>ii.</b><h3>情緒為本</h3><p>行為是情緒的結果。先安頓情緒，社交與改變才會真正發生。</p></div><div><b>iii.</b><h3>進步看得見</h3><p>每堂交代進度，學期報告及學生專屬頁隨時查看。</p></div></div></div></section>
+<section class="sec"><div class="wrap letter"><img src="/assets/img/hero-dogs-card.jpg" alt="" style="aspect-ratio:4/5;width:100%"><div class="note"><span class="caps">A Letter to Parents</span><div style="height:16px"></div><p>Pawradise 的初心很簡單：讓每一位毛孩被好好理解，也讓每一位家長安心。養育毛孩不只是照顧起居，而是一段互相學習、互相陪伴的關係。</p><div class="sig">With love, the Pawradise family</div></div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="head"><div><span class="caps">Parent Voices</span><h2>家長心聲</h2></div><span class="en">4.9★ on Google</span></div><div class="voices"><blockquote>上完堂後有明顯進步！我亦從牠的身體語言，清楚了解牠何時放鬆、何時緊張。<cite>Emily・Google 評論</cite></blockquote><blockquote>最欣賞係唔只「上完堂就算」，而係有人一路跟進。<cite>Mungmung 家長・貴婦</cite></blockquote><blockquote>由一隻返學會震嘅小奶狗，成長到放學都仲想留低繼續玩。<cite>Bear Bear 家長・松鼠犬</cite></blockquote></div></div></section>
+<section class="end"><div class="wrap"><span class="caps">Admissions</span><h2>由一次參觀開始</h2><a class="btn btn-solid">WhatsApp 預約參觀</a></div></section>
+<footer>Pawradise Limited・尖沙咀彌敦道 200 號 Stone Rise 16–17 樓・筲箕灣道 180 號 One Eighty 一樓（即將開幕）</footer>
+</body></html>

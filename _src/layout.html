@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="robots" content="{{robots}}">
+<link rel="canonical" href="{{canonical}}">
+{{hreflang}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pawradise">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{og_image}}">
+<meta property="og:locale" content="{{og_locale}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1F3552">
+<link rel="icon" href="/assets/img/crest.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Noto+Sans+HK:wght@400;500&family=Noto+Serif+HK:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site-c.css">
+{{jsonld}}
+</head>
+<body>
+<a class="skip" href="#main">{{skip_text}}</a>
+<div class="strip"></div>
+<header class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="{{home}}"><img src="/assets/img/crest.png" alt="{{crest_alt}}" width="44" height="37"><b>PAWRADISE</b></a>
+  <nav class="menu" aria-label="{{menu_label}}">{{nav}}<a class="menu-cta" href="https://wa.me/85294596420">{{wa_text}}</a></nav>
+  <a class="btn btn-navy" href="https://wa.me/85294596420">{{wa_text}}</a>
+  <button class="burger" aria-label="{{open_menu}}" aria-expanded="false" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰</button>
+</div></header>
+<main id="main">
+{{content}}
+</main>
+{{footer}}
+</body>
+</html>
