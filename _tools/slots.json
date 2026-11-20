@@ -60,7 +60,7 @@
  "trial-hero-1": {
   "file": "dog-school-trial-day-assessment.jpg",
   "alt": "體驗試堂：導師與家長懷中的博美狗狗打招呼",
-  "alt_en": "Trial day at Pawradise: a trainer greets a Pomeranian held by its parent"
+  "alt_en": "A teacher greets a Pomeranian held by its parent"
  },
  "hotel-hero-1": {
   "file": "dog-hotel-tsim-sha-tsui-harbour-view.jpg",
@@ -238,18 +238,22 @@
  },
  "trial-step-1": {
   "file": "dog-school-trial-meet-trainer.jpg",
-  "alt": "試堂：比熊同學開心走進校園"
+  "alt": "試堂：比熊同學開心走進校園",
+  "alt_en": "A happy Bichon arriving at school"
  },
  "trial-step-2": {
   "file": "dog-school-trial-parent-class.jpg",
-  "alt": "試堂：導師為家長講解狗狗的身體語言"
+  "alt": "試堂：導師為家長講解狗狗的身體語言",
+  "alt_en": "A teacher explains dog body language to parents"
  },
  "trial-step-3": {
   "file": "dog-school-trial-social-assessment.jpg",
-  "alt": "試堂：導師手持評估表，記錄比熊同學的表現"
+  "alt": "試堂：導師手持評估表，記錄比熊同學的表現",
+  "alt_en": "A teacher records a Bichon student on the assessment form"
  },
  "trial-step-4": {
   "file": "dog-school-trial-assessment-report.jpg",
-  "alt": "試堂：導師向家長講解狗狗的評估報告"
+  "alt": "試堂：導師向家長講解狗狗的評估報告",
+  "alt_en": "Teachers go through the assessment report with a parent"
  }
 }
