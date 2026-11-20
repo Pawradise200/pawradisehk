@@ -618,3 +618,14 @@ footer.cf .wrap{display:block}
 @media (max-width:760px){.trial-prep{grid-template-columns:1fr 1fr;gap:12px}.trial-prep li{padding:20px 12px}}
 /* 冇狗狗相嘅心聲卡唔留相位（2026-11-20） */
 .hc-reviews blockquote:not(:has(.hc-rv-ph,.hc-ph-img,img)){grid-template-columns:1fr;grid-template-areas:"tag" "who" "q"}
+/* 學院「這些時刻」每格加金色外框（2026-11-20 工作台意見） */
+.hc .hc-cases article{border:1.5px solid var(--gold)}
+/* 致家長信：白色卷紙設計（2026-11-20 工作台意見，取代信封） */
+#letter .hc-letter.solo{padding:26px 0}
+#letter .hc-letter.solo:before,#letter .hc-letter.solo:after{content:"";display:block;position:absolute;left:-14px;right:-14px;height:30px;border-radius:15px;clip-path:none;box-shadow:0 6px 14px rgba(92,62,39,.18);
+  background:linear-gradient(180deg,#fff 0%,#f3ede2 45%,#d9cdb8 100%);z-index:2}
+#letter .hc-letter.solo:before{top:8px;bottom:auto}
+#letter .hc-letter.solo:after{bottom:8px;top:auto}
+#letter .hc-note{margin:0;transform:none;background:#fff;border-radius:0;box-shadow:0 10px 30px rgba(92,62,39,.12);padding:64px 56px 60px;border-left:1px solid #eee6d8;border-right:1px solid #eee6d8}
+#letter .hc-note:after{display:none}
+@media (max-width:760px){#letter .hc-letter.solo:before,#letter .hc-letter.solo:after{left:-6px;right:-6px;height:24px}#letter .hc-note{padding:52px 24px 48px}}
