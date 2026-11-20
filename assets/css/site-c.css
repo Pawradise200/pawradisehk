@@ -616,3 +616,5 @@ footer.cf .wrap{display:block}
 .trial-prep h3{font-size:18px;margin:12px 0 4px}
 .trial-prep p{color:var(--muted);font-size:14px;margin:0}
 @media (max-width:760px){.trial-prep{grid-template-columns:1fr 1fr;gap:12px}.trial-prep li{padding:20px 12px}}
+/* 冇狗狗相嘅心聲卡唔留相位（2026-11-20） */
+.hc-reviews blockquote:not(:has(.hc-rv-ph,.hc-ph-img,img)){grid-template-columns:1fr;grid-template-areas:"tag" "who" "q"}
