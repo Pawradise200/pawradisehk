@@ -76,6 +76,14 @@ TST = {
 # 筲箕灣校區：開幕前唔加 LocalBusiness 標記
 
 
+
+def is_draft(path):
+    """睇 _src/pages/<path>/index.html 頂部 meta 有冇 draft。"""
+    f = os.path.join(ROOT, '_src', 'pages', path.strip('/'), 'index.html') if path.strip('/') else os.path.join(ROOT, '_src', 'pages', 'index.html')
+    if not os.path.exists(f): return True
+    m = re.match(r'<!--meta (.*?) -->', open(f, encoding='utf-8').read(), re.S)
+    return bool(m and json.loads(m.group(1)).get('draft'))
+
 def read_page(path):
     raw = open(path, encoding='utf-8').read()
     m = re.match(r'\s*<!--meta\s*(\{.*?\})\s*-->\s*', raw, re.S)
@@ -177,7 +185,7 @@ def render(layout, meta, content, url):
     jsonld = '<script type="application/ld+json">%s</script>' % json.dumps(
         {'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False)
     hreflang = ''
-    if meta.get('alt'):
+    if meta.get('alt') and not meta.get('draft') and not is_draft(meta['alt']):  # 對方係草稿就唔出 hreflang
         alt = meta['alt']
         pair = {lang: url, ('zh-HK' if en else 'en'): alt}
         hreflang = ''.join('<link rel="alternate" hreflang="%s" href="%s%s">' % (k, SITE, v) for k, v in pair.items())
