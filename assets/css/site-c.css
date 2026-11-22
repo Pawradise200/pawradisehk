@@ -661,3 +661,6 @@ footer.cf .wrap{display:block}
 .hc-alink{margin-left:14px;color:var(--navy);text-decoration:underline}
 @media (max-width:900px){.hc-glist{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.hc-glist{grid-template-columns:1fr;gap:22px}.hc-alink{display:inline-block;margin:14px 0 0}}
+.hc-afig{margin:8px 0 24px}
+.hc-afig img{width:100%;aspect-ratio:3/2}
+.hc-anote{font-size:14px !important;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
