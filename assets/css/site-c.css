@@ -631,3 +631,36 @@ footer.cf .wrap{display:block}
 @media (max-width:760px){#letter .hc-letter.solo:before,#letter .hc-letter.solo:after{left:-6px;right:-6px;height:24px}#letter .hc-note{padding:52px 24px 48px}}
 /* 英文頁手機版：口碑格唔撐闊（2026-11-20） */
 @media (max-width:760px){.hc-trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hc-trust-grid>*{min-width:0}.hc-trust-grid small{overflow-wrap:anywhere}}
+
+/* === 家長指南（2026-11-22）=== */
+.hc-glist{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.hc-gcard{display:block;color:var(--navy);text-decoration:none;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold)}
+.hc-gcard[hidden]{display:none}
+.hc-gcard img,.hc-gcard .ph{width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--cream)}
+.hc-gcard .bd{padding:22px 24px 26px}
+.hc-gcard h3{font-size:20px;margin:8px 0 8px}
+.hc-gcard p{color:var(--muted);font-size:15px;line-height:1.8;margin:0 0 12px}
+.hc-gcard time{font-size:13px;color:var(--muted)}
+.hc-gcard:hover h3{text-decoration:underline}
+.hc-gfilter{margin-bottom:34px}
+.hc-gfilter a.on{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+.hc-gsec{padding-top:0}
+.hc-gempty{color:var(--muted);text-align:center;padding:40px 0}
+.hc-aw{max-width:760px}
+.hc-crumb{font-size:13px;color:var(--muted);margin-bottom:18px}
+.hc-crumb a{color:var(--muted)}
+.hc-ameta{font-size:14px;color:var(--muted);margin:0}
+.hc-abody{padding-top:0}
+.hc-acover{margin:0 0 40px}
+.hc-acover img{width:100%;aspect-ratio:3/2}
+.hc-article .hc-abody h2{font-size:clamp(22px,2.4vw,28px);margin:44px 0 14px}
+.hc-article .hc-abody p,.hc-article .hc-abody li{font-size:17px;line-height:2}
+.hc-article .hc-abody ul,.hc-article .hc-abody ol{padding-left:1.4em;margin:0 0 20px}
+.hc-article .hc-abody li{margin-bottom:6px}
+.hc-lead{font-family:var(--serif-zh);font-size:19px !important;color:var(--navy)}
+.hc-alink{margin-left:14px;color:var(--navy);text-decoration:underline}
+@media (max-width:900px){.hc-glist{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.hc-glist{grid-template-columns:1fr;gap:22px}.hc-alink{display:inline-block;margin:14px 0 0}}
+.hc-afig{margin:8px 0 24px}
+.hc-afig img{width:100%;aspect-ratio:3/2}
+.hc-anote{font-size:14px !important;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
