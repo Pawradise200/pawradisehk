@@ -75,6 +75,77 @@ TST = {
 }
 # 筲箕灣校區：開幕前唔加 LocalBusiness 標記
 
+# ---------- 家長指南（/guide/）----------
+# 每篇文章＝_src/pages/guide/<英文網址>/index.html，meta 加 "article": {category, date, cover, excerpt}
+# build 會自動：套文章頁頭頁尾、排入 /guide/ 列表（新到舊）、加 Article＋麵包屑標記、檢查分類同日期
+GUIDE_CATS = [('behaviour', '狗狗行為'), ('social', '狗狗社交'), ('boarding', '寵物寄宿'), ('care', '日常照顧')]
+GUIDE_CTA = {
+    'behaviour': ('想了解狗狗的情緒與社交狀態？', '學院新生由招生日體驗試堂開始，導師會先觀察及評估。', '/academy/trial/', '了解體驗試堂'),
+    'social': ('想了解狗狗的情緒與社交狀態？', '學院新生由招生日體驗試堂開始，導師會先觀察及評估。', '/academy/trial/', '了解體驗試堂'),
+    'boarding': ('準備為狗狗安排寄宿？', '入住前會先評估狗狗的性格及風險評級，再安排照顧。', '/hotel/', '了解校園式寵物酒店'),
+    'care': ('有其他照顧上的疑問？', '歡迎透過 WhatsApp 與我們聯絡，導師樂意解答。', '/faq/', '查看常見問題'),
+}
+
+
+def fmt_date(d):
+    y, m, dd = d.split('-')
+    return '%s 年 %d 月 %d 日' % (y, int(m), int(dd))
+
+
+def guide_card(a):
+    cat = dict(GUIDE_CATS)[a['category']]
+    img = '<img src="%s" alt="" loading="lazy">' % a['cover'] if a.get('cover') else '<div class="ph"></div>'
+    return ('<a class="hc-gcard" href="%s" data-cat="%s">%s<div class="bd"><span class="caps">%s</span>'
+            '<h3>%s</h3><p>%s</p><time datetime="%s">%s</time></div></a>') % (
+        a['url'], a['category'], img, cat, html.escape(a['h1']), html.escape(a['excerpt']), a['date'], fmt_date(a['date']))
+
+
+def guide_list_html(articles):
+    if not articles:
+        return '<p class="hc-gempty">第一篇文章即將推出。</p>'
+    jump = '<nav class="hc-jump hc-gfilter" aria-label="文章分類"><a href="#all" data-f="all" class="on">全部</a>' + ''.join(
+        '<a href="#%s" data-f="%s">%s</a>' % (k, k, v) for k, v in GUIDE_CATS if any(a['category'] == k for a in articles)) + '</nav>'
+    script = ('<script>(function(){var n=document.querySelector(".hc-gfilter");if(!n)return;'
+              'function go(f){n.querySelectorAll("a").forEach(function(a){a.classList.toggle("on",a.dataset.f===f)});'
+              'document.querySelectorAll(".hc-gcard").forEach(function(c){c.hidden=!(f==="all"||c.dataset.cat===f)})}'
+              'n.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)return;e.preventDefault();go(a.dataset.f);history.replaceState(null,"","#"+a.dataset.f)});'
+              'var h=location.hash.slice(1);if(h)go(h)})();</script>')
+    return jump + '<div class="hc-glist">' + ''.join(guide_card(a) for a in articles) + '</div>' + script
+
+
+def wrap_article(meta, content, url, articles):
+    a = meta['article']; cat = dict(GUIDE_CATS)[a['category']]
+    cover = ('<figure class="hc-acover"><img src="%s" alt="%s"></figure>' % (a['cover'], html.escape(a.get('cover_alt', meta['h1'])))) if a.get('cover') else ''
+    head = ('<div class="hc hc-article"><section class="hc-sec hc-pagehead"><div class="wrap hc-aw">'
+            '<nav class="hc-crumb" aria-label="麵包屑"><a href="/">首頁</a> › <a href="/guide/">家長指南</a> › <a href="/guide/#%s">%s</a></nav>'
+            '<span class="caps">%s</span><h1>%s</h1><p class="hc-ameta">%s・%s</p></div></section>'
+            '<section class="hc-sec hc-abody"><div class="wrap hc-aw">%s') % (
+        a['category'], cat, cat, html.escape(meta['h1']), fmt_date(a['date']), html.escape(a.get('author', 'Pawradise 導師團隊')), cover)
+    q, sub, href, label = GUIDE_CTA[a['category']]
+    rel = [x for x in articles if x['url'] != url and x['category'] == a['category']][:3] or [x for x in articles if x['url'] != url][:3]
+    tail = '</div></section>'
+    tail += ('<section class="hc-sec hc-invite"><div class="wrap"><h2>%s</h2><p>%s</p>'
+             '<a class="btn btn-navy" href="%s">%s</a> <a class="hc-alink" href="%s">WhatsApp 查詢</a></div></section>') % (q, sub, href, label, WHATSAPP)
+    if rel:
+        tail += '<section class="hc-sec hc-cream"><div class="wrap"><div class="hc-head"><div><span class="caps">Read more</span><h2>延伸閱讀</h2></div></div><div class="hc-glist">%s</div></div></section>' % ''.join(guide_card(x) for x in rel)
+    return head + content.strip() + tail + '</div>'
+
+
+def article_jsonld(meta, url):
+    a = meta['article']; cat = dict(GUIDE_CATS)[a['category']]
+    art = {'@type': 'Article', 'headline': meta['h1'], 'description': meta['description'],
+           'datePublished': a['date'], 'dateModified': a.get('updated', a['date']),
+           'author': {'@type': 'Organization', 'name': a.get('author', 'Pawradise 導師團隊'), '@id': SITE + '/#org'},
+           'publisher': {'@id': SITE + '/#org'}, 'mainEntityOfPage': SITE + url, 'inLanguage': 'zh-HK',
+           'articleSection': cat}
+    if a.get('cover'):
+        art['image'] = SITE + a['cover']
+    crumbs = {'@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': '首頁', 'item': SITE + '/'},
+        {'@type': 'ListItem', 'position': 2, 'name': '家長指南', 'item': SITE + '/guide/'},
+        {'@type': 'ListItem', 'position': 3, 'name': meta['h1'], 'item': SITE + url}]}
+    return [art, crumbs]
+
 
 
 def is_draft(path):
@@ -182,6 +253,8 @@ def render(layout, meta, content, url):
     faq = faq_jsonld(content)
     if faq:
         graph.append(faq)
+    if meta.get('article'):
+        graph += article_jsonld(meta, url)
     jsonld = '<script type="application/ld+json">%s</script>' % json.dumps(
         {'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False)
     hreflang = ''
@@ -196,7 +269,7 @@ def render(layout, meta, content, url):
         'robots': 'noindex,nofollow' if (meta.get('noindex') or meta.get('draft')) else 'index,follow',
         'canonical': SITE + url,
         'hreflang': hreflang,
-        'og_image': SITE + meta.get('og_image', '/assets/img/pawradise-dog-hotel-academy-hong-kong.jpg'),
+        'og_image': SITE + meta.get('og_image', (meta.get('article') or {}).get('cover') or '/assets/img/pawradise-dog-hotel-academy-hong-kong.jpg'),
         'og_locale': 'en_HK' if en else 'zh_HK',
         'jsonld': jsonld,
         'skip_text': 'Skip to content' if en else '跳到主要內容',
@@ -233,6 +306,25 @@ def main():
     c_ver = hashlib.md5(open(os.path.join(ROOT, 'assets/css/site-c.css'), 'rb').read()).hexdigest()[:8]
     layout = layout.replace('/assets/css/site-c.css"', '/assets/css/site-c.css?v=%s"' % c_ver)
     built, sitemap = [], []
+    # 先收集家長指南文章（草稿唔入列表）
+    articles, guide_problems = [], []
+    for dirpath, _, files in os.walk(os.path.join(PAGES, 'guide')):
+        if 'index.html' not in files or dirpath == os.path.join(PAGES, 'guide'):
+            continue
+        rel = os.path.relpath(os.path.join(dirpath, 'index.html'), PAGES)
+        m, _c = read_page(os.path.join(dirpath, 'index.html'))
+        a = m.get('article')
+        if not a:
+            guide_problems.append('%s：家長指南文章冇 article 設定' % rel); continue
+        if a.get('category') not in dict(GUIDE_CATS):
+            guide_problems.append('%s：分類要係 %s 其中一個' % (rel, '／'.join(k for k, _ in GUIDE_CATS))); continue
+        if not re.match(r'^\d{4}-\d{2}-\d{2}$', str(a.get('date', ''))):
+            guide_problems.append('%s：日期格式要係 2026-12-01' % rel); continue
+        if not m.get('h1'):
+            guide_problems.append('%s：冇 h1（文章大標題）' % rel); continue
+        if not m.get('draft') or os.environ.get('GUIDE_PREVIEW'):  # GUIDE_PREVIEW=1：本機預覽草稿文章（唔好咁樣 push）
+            articles.append(dict(a, url=url_of(rel), h1=m['h1'], excerpt=a.get('excerpt') or m['description']))
+    articles.sort(key=lambda x: x['date'], reverse=True)
     for dirpath, _, files in os.walk(PAGES):
         for f in sorted(files):
             if not f.endswith('.html'):
@@ -242,6 +334,9 @@ def main():
             meta, content = read_page(src)
             content = apply_slots(content, str(meta.get('lang', '')).startswith('en'))
             url = url_of(rel)
+            if meta.get('article') and meta['article'].get('category') in dict(GUIDE_CATS):
+                content = wrap_article(meta, content, url, articles)
+            content = content.replace('<!--guide-list-->', guide_list_html(articles))
             dst = os.path.join(ROOT, rel)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             open(dst, 'w', encoding='utf-8').write(render(layout, meta, content, url))
@@ -263,7 +358,7 @@ def main():
         'User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' % SITE)
 
     # ---------- 自動檢查 ----------
-    problems = []
+    problems = list(guide_problems)
     for rel, url, meta in built:
         page = open(os.path.join(ROOT, rel), encoding='utf-8').read()
         if '{{' in page:

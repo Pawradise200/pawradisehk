@@ -29,3 +29,11 @@
 - 所有頁拎走 `draft`
 - 刪舊檔：`support.js`、`images/`
 - 開 Google Search Console＋Google Analytics，加代碼
+
+## 家長指南（/guide/）
+- 每篇＝`_src/pages/guide/<英文網址>/index.html`，參考範例 `dog-not-playing-with-other-dogs/`
+- meta 要有 `h1`（大標題）同 `article`：`category`（behaviour／social／boarding／care）、`date`（2026-12-01）、`cover`、`cover_alt`、`excerpt`
+- 正文只寫 `<p class="hc-lead">` 導言＋`<h2>`／`<p>`／`<ul>`；頁頭、封面、文尾邀請、延伸閱讀、Article 標記全部自動
+- 列表頁自動排（新到舊）；`draft: true` 唔入列表。本機睇草稿：`GUIDE_PREVIEW=1 python3 _tools/build.py`（push 前要行返普通 build）
+- 第一篇正式文章上線時，`guide/index.html` 拎走 draft，並喺 build.py `NAV_ZH`／頁尾加家長指南連結
+- 同事寫稿範本：`~/Desktop/內部文件/網站重建/家長指南寫稿範本.docx`
